@@ -97,13 +97,13 @@
             <a href="index.html" class="nav-item nav-link"
               ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a
             >
-            <a href="setup.html" class="nav-item nav-link"
+            <a href="setup.html" class="nav-item nav-link active"
               ><i class="fa fa-cogs me-2"></i>Setup</a
             >
             <a href="report.html" class="nav-item nav-link"
               ><i class="fa fa-file-alt me-2"></i>Report</a
             >
-            <a href="subaction.html" class="nav-item nav-link active"
+            <a href="subaction.html" class="nav-item nav-link"
               ><i class="fa fa-flag-checkered me-2"></i>Sub Action</a
             >
           </div>
@@ -216,40 +216,183 @@
         <!-- Setup Start -->
         <div class="container-fluid pt-4 px-4 overflow-hidden">
 
-                <h1 class="mb-4 text-primary">Subscription Action</h1>
-  
- <!-- Search Row -->
-<div class="row justify-content-center mb-3">
-  <div class="col-12 col-md-6">
-    <div class="datatable-search d-flex align-items-center">
-        <i class="fas fa-search"></i>
-        <input type="text" id="tableSearch" class="form-control" placeholder="Search...">
+            <h2 class="mb-4 text-primary">Subscription Management</h2>
+            <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="setup.html">Setup</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Subscription Management List</li>
+  </ol>
+</nav>
+
+    <!-- Header Row -->
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div class="datatable-search d-flex align-items-center">
+            <i class="fas fa-search"></i>
+            <input type="text" id="tableSearch" class="form-control" placeholder="Search...">
+        </div>
+
+        <button class="btn btn-primary d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#addModal">
+            <i class="fas fa-plus"></i> Add Details
+            </button>
     </div>
-  </div>
+
+    <!-- Responsive Table -->
+    <div class="table-responsive">
+        <table id="myTable" class="table table-hover align-middle">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>Client</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>No of Asset Allowed</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mohammed Hatem</td>
+                    <td>27-11-2025</td>
+                    <td>26-11-2026</td>
+                    <td>1</td>
+                    <td> <span class="badge bg-success">Active</span></td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+
+                <tr>
+                    <td>Mohammed Hatem</td>
+                    <td>27-11-2025</td>
+                    <td>26-11-2026</td>
+                    <td>1</td>
+                    <td> <span class="badge bg-warning">Pending</span></td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+
+                <tr>
+                    <td>Mohammed Hatem</td>
+                    <td>27-11-2025</td>
+                    <td>26-11-2026</td>
+                    <td>1</td>
+                    <td> <span class="badge bg-secondary">Inactive</span></td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Mohammed Hatem</td>
+                    <td>27-11-2025</td>
+                    <td>26-11-2026</td>
+                    <td>1</td>
+                    <td> <span class="badge bg-success">Active</span></td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+
+                <tr>
+                    <td>Mohammed Hatem</td>
+                    <td>27-11-2025</td>
+                    <td>26-11-2026</td>
+                    <td>1</td>
+                    <td> <span class="badge bg-warning">Pending</span></td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+
+                <tr>
+                    <td>Mohammed Hatem</td>
+                    <td>27-11-2025</td>
+                    <td>26-11-2026</td>
+                    <td>1</td>
+                    <td> <span class="badge bg-secondary">Inactive</span></td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<!-- Responsive Table Wrapper -->
-<div class="table-responsive">
-  <table id="myTable" class="table table-hover">
-      <thead class="bg-primary">
-          <tr>
-              <th class="text-white">Client Name</th>
-              <th class="text-white">Selected Plan</th>
-              <th class="text-white">Previously Selected Plan</th>
-              <th class="text-white">Action</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr><td>Mohamed</td><td>Pro Plan</td><td>Free</td><td><span class="badge bg-success">Active</span></td></tr>
-          <tr><td>Ahmed</td><td>Pro Plan</td><td>Free</td><td><span class="badge bg-secondary">Inactive</span></td></tr>
-          <tr><td>Sarah</td><td>Pro Plan</td><td>Free</td><td><span class="badge bg-success">Active</span></td></tr>
-          <tr><td>Ali</td><td>Pro Plan</td><td>Free</td><td><span class="badge bg-warning">Pending</span></td></tr>
-      </tbody>
-  </table>
-</div>
+<!-- ===================================================== -->
+<!-- Add New Modal -->
+<!-- ===================================================== -->
+<div class="modal fade" id="addModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
 
+            <div class="modal-header">
+                <h5 class="modal-title text-primary">Subscription List</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="addForm">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label">Client *</label>
+                            <select class="form-select">
+                                <option disabled>Record not found</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Subscription Plan *</label>
+                            <select class="form-select">
+                                <option>آلات ثقيلة</option>
+                                <option>آلات متوسطة</option>
+                                <option>آلات خفيفة</option>
+                                <option>مواشى</option>
+                                <option>حيوانات اليفة</option>
+                                <option>تتبع افراد</option>
+                                <option>تتتبع فرد</option>
+                                <option>تتبع اعمال</option>
+                                <option>تبع اعمال</option>
+                                <option>تتبع منزلى</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">No of Asset Allowed </label>
+                            <input type="number" class="form-control" value="1">
+                            
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Status *</label>
+                            <select class="form-select" disabled>
+                                <option>Active</option>
+                                <option>Inactive</option>
+                                <option>Pending</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Start Date *</label>
+                            <input type="date" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">End Date *</label>
+                            <input type="date" class="form-control" disabled>
+                        </div>
+
+                        <div class="col-12 mt-2">
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <span class="form-check-label">Is Active</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary">Save</button>
+            </div>
 
         </div>
+    </div>
+</div>
+
         <!-- Setup End -->
 
         <!-- Back to Top -->

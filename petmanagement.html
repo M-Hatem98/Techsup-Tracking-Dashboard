@@ -30,6 +30,8 @@
     <!-- Datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
@@ -216,84 +218,111 @@
         <!-- Setup Start -->
         <div class="container-fluid pt-4 px-4 overflow-hidden">
 
-            <h2 class="mb-4 text-primary">Subscription Plan</h2>
+            <h2 class="mb-4 text-primary">Pet Management</h2>
             <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="setup.html">Setup</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Subscription Plan List</li>
+    <li class="breadcrumb-item active" aria-current="page">Pet Management List</li>
   </ol>
 </nav>
-
-    <!-- Header Row -->
     <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-        <div class="datatable-search d-flex align-items-center">
+<div class="datatable-search d-flex align-items-center">
             <i class="fas fa-search"></i>
-            <input type="text" id="tableSearch" class="form-control" placeholder="Search...">
+            <input type="text" id="tableSearch" class="form-control" placeholder="Search IMEI">
         </div>
+        <div class="d-flex align-items-center gap-2">
+    <!-- <label for="importExcel" class="btn d-flex align-items-center gap-2 mb-0 text-primary fs-4">
+        <i class="fas fa-file-import"></i>
+    </label>
+    <input type="file" id="importExcel" accept=".xlsx,.xls" hidden>
 
-        <button class="btn btn-primary d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#addModal">
-            <i class="fas fa-plus"></i> Add New Plan
-        </button>
+    <button id="exportBtn" class="btn d-flex align-items-center gap-2 text-primary fs-4">
+        <i class="fas fa-file-export"></i>
+    </button> -->
+
+    <!-- Add New SIM Card Button -->
+    <button class="btn btn-primary d-flex align-items-center gap-2" 
+            data-bs-toggle="modal" data-bs-target="#addModal">
+        <i class="fas fa-plus"></i> Add New Pet Details
+    </button>
     </div>
+
+</div>
+
 
     <!-- Responsive Table -->
     <div class="table-responsive">
         <table id="myTable" class="table table-hover align-middle">
             <thead class="bg-primary text-white">
                 <tr>
-                    <th>Name</th>
+                    <th>Pet Name</th>
+                    <th>Pet Type</th>
+                    <th>Age</th>
+                    <th>Color</th>
+                    <th>Gender</th>
+                    <th>Device</th>
+                    <th>Client</th>
                     <th>Description</th>
-                    <th>Plan Type</th>
-                    <th>Total</th>
-                    <th>No of Asset</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>Ketty</td>
+                    <td>Cat</td>
+                    <td>2</td>
+                    <td>Yellow</td>
+                    <td>Female</td>
+                    <td>Device H</td>
+                    <td>Mohammed Hatem</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
-
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>Ketty</td>
+                    <td>Cat</td>
+                    <td>2</td>
+                    <td>Yellow</td>
+                    <td>Female</td>
+                    <td>Device H</td>
+                    <td>Mohammed Hatem</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
-
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>Ketty</td>
+                    <td>Cat</td>
+                    <td>2</td>
+                    <td>Yellow</td>
+                    <td>Female</td>
+                    <td>Device H</td>
+                    <td>Mohammed Hatem</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
-
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>Ketty</td>
+                    <td>Cat</td>
+                    <td>2</td>
+                    <td>Yellow</td>
+                    <td>Female</td>
+                    <td>Device H</td>
+                    <td>Mohammed Hatem</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
-
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>Ketty</td>
+                    <td>Cat</td>
+                    <td>2</td>
+                    <td>Yellow</td>
+                    <td>Female</td>
+                    <td>Device H</td>
+                    <td>Mohammed Hatem</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
+                      
             </tbody>
         </table>
     </div>
@@ -303,11 +332,11 @@
 <!-- Add New Modal -->
 <!-- ===================================================== -->
 <div class="modal fade" id="addModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title text-primary">Subscription Plan Details</h5>
+                <h5 class="modal-title text-primary">Add Pet Details</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
 
@@ -317,82 +346,84 @@
                     <div class="row g-3">
 
                         <div class="col-md-6">
-                            <label class="form-label">Name *</label>
+                            <label class="form-label">Pet Name *</label>
                             <input type="text" class="form-control">
                         </div>
 
-                        <div class="col-md-6">
-                            <label class="form-label">Customer Type *</label>
+                        <div class="col-md-3">
+                            <label class="form-label">Pet Type</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Age</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Vehicle Type</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Color</label>
                             <select class="form-select">
-                                <option>Individual</option>
-                                <option>Business</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
                             </select>
                         </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Asset Type *</label>
+                        <div class="col-md-3">
+                            <label class="form-label">Client *</label>
                             <select class="form-select">
-                                <option>Car</option>
-                                <option>Pet</option>
-                                <option>Human</option>
+                                <option disabled>Record Not Found</option>
                             </select>
                         </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Discount *</label>
-                            <input type="number" class="form-control" value="0">
+                        <div class="col-md-3">
+                            <label class="form-label">Device</label>
+                            <select class="form-select">
+                                <option disabled>Record Not Found</option>
+                            </select>
                         </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Tax *</label>
-                            <input type="number" class="form-control" value="0">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Sub Total *</label>
-                            <input type="number" class="form-control" value="0">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Total *</label>
-                            <input type="number" class="form-control" value="0">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Credits Per Month *</label>
-                            <input type="number" class="form-control" value="0">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">No of Asset *</label>
-                            <input type="number" class="form-control" value="1">
-                        </div>
-
                         <div class="col-12">
                             <label class="form-label">Description</label>
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
-
-                        <div class="col-12 mt-2">
-                            <label class="form-check">
-                                <input type="checkbox" class="form-check-input">
-                                <span class="form-check-label">Is Active</span>
-                            </label>
+                        <h6>Owner Address</h6>
+                        <div class="col-md-6">
+                            <label class="form-label">Address Line 1</label>
+                            <input type="text" class="form-control">
                         </div>
-
-                    </div>
-
-                    <hr class="my-3">
-
-                    <!-- Features Section -->
-                    <label class="fw-bold">Features</label>
-
-                    <div id="featuresContainer"></div>
-
-                    <!-- Add Feature Button -->
-                    <button type="button" id="addFeatureBtn" class="btn btn-primary mt-2">
-                        <i class="fas fa-plus"></i> Add Feature
-                    </button>
+                        <div class="col-md-6">
+                            <label class="form-label">Address Line 2</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Country</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">State</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Postal Code</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="mail" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Mobile</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                     </div>
 
                 </form>
             </div>
@@ -429,6 +460,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
 
 
     <!-- Template Javascript -->

@@ -192,17 +192,22 @@
     //         responsive: true
     //     }
     // });
-$(document).ready(function () {
-    var table = $('#myTable').DataTable({
-        dom: 't', // hide default search bar
-        pageLength: 5,
-        responsive: true
-    });
 
-    // Connect custom search bar
-    $('#tableSearch').keyup(function () {
-        table.search($(this).val()).draw();
-    });
+
+$(document).ready(function () { 
+    var table = $('#myTable').DataTable({
+         dom: 'rtip',  
+         pageLength: 5, 
+         lengthMenu: [5, 10, 20, 50], 
+         responsive: true, 
+         language: {
+             search: "",
+            searchPlaceholder: "", 
+        }
+     }); 
+ $('#tableSearch').keyup(function () {
+     table.search($(this).val()).draw(); 
+    }); 
 });
 
 
@@ -216,3 +221,25 @@ $(document).ready(function () {
     duration: 800,
     once: true
   });
+
+
+  document.getElementById("addFeatureBtn").addEventListener("click", function () {
+    const container = document.getElementById("featuresContainer");
+
+    const featureDiv = document.createElement("div");
+    featureDiv.className = "feature-row";
+
+    featureDiv.innerHTML = `
+        <input type="text" class="form-control" placeholder="Enter feature" />
+        <button type="button" class="btn btn-danger delete-feature-btn">
+            <i class="fas fa-trash"></i>
+        </button>
+    `;
+
+    container.appendChild(featureDiv);
+
+    // Delete feature
+    featureDiv.querySelector(".delete-feature-btn").onclick = function () {
+        featureDiv.remove();
+    };
+});

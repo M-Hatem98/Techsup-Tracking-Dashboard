@@ -216,11 +216,11 @@
         <!-- Setup Start -->
         <div class="container-fluid pt-4 px-4 overflow-hidden">
 
-            <h2 class="mb-4 text-primary">Subscription Plan</h2>
+            <h2 class="mb-4 text-primary">Geo Fence</h2>
             <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="setup.html">Setup</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Subscription Plan List</li>
+    <li class="breadcrumb-item active" aria-current="page">Geo Fence List</li>
   </ol>
 </nav>
 
@@ -232,8 +232,8 @@
         </div>
 
         <button class="btn btn-primary d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#addModal">
-            <i class="fas fa-plus"></i> Add New Plan
-        </button>
+            <i class="fas fa-plus"></i> Add Details
+            </button>
     </div>
 
     <!-- Responsive Table -->
@@ -241,57 +241,44 @@
         <table id="myTable" class="table table-hover align-middle">
             <thead class="bg-primary text-white">
                 <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Plan Type</th>
-                    <th>Total</th>
-                    <th>No of Asset</th>
+                    <th>Geo Fence Zone</th>
+                    <th>Geo Fence Description</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>6121890</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
 
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>6124111</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
 
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>6124101</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+                <tr>
+                    <td>6124120</td>
+                    <td>Description</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
 
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>6125010</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
 
                 <tr>
-                    <td>آلات ثقيلة</td>
+                    <td>Mohammed Hatem</td>
                     <td>Description</td>
-                    <td>Weekly</td>
-                    <td>0</td>
-                    <td>1</td>
                     <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
                 </tr>
             </tbody>
@@ -303,108 +290,80 @@
 <!-- Add New Modal -->
 <!-- ===================================================== -->
 <div class="modal fade" id="addModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content p-3" style="border-radius: 18px;">
 
-            <div class="modal-header">
-                <h5 class="modal-title text-primary">Subscription Plan Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
+            <!-- Close Button -->
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
 
-            <div class="modal-body">
-                <form id="addForm">
+            <!-- Title -->
+            <h4 class="text-primary fw-bold px-2 mb-3">Geo Fence List</h4>
+
+            <div class="modal-body pt-0">
+                <div class="row">
+                  <div class="col-12 col-md-6 mt-3">
+                    <div class="d-flex gap-2">
+                      <input id="searchBox" class="form-control mb-2 w-75" placeholder="Search">
+                      <button id="deleteZoneBtn" class="btn btn-danger mb-2">Delete Zone</button>
+                    </div>
+                      <div id="map" style="height: 500px; width: 100%;"></div>
+                  </div>
+                  <div class="col-12 col-md-6 mt-3">
+                    <form id="addForm">
 
                     <div class="row g-3">
 
-                        <div class="col-md-6">
-                            <label class="form-label">Name *</label>
-                            <input type="text" class="form-control">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Customer Type *</label>
+                      <div class="col-md-12">
                             <select class="form-select">
-                                <option>Individual</option>
-                                <option>Business</option>
+                                <option hidden>Associated Client</option>
+                                <option disabled>Record Not Found</option>
                             </select>
                         </div>
 
-                        <div class="col-md-6">
-                            <label class="form-label">Asset Type *</label>
-                            <select class="form-select">
-                                <option>Car</option>
-                                <option>Pet</option>
-                                <option>Human</option>
-                            </select>
+                        <div class="col-md-12">
+                           <input type="text" class="form-control" placeholder="Name">
                         </div>
 
-                        <div class="col-md-6">
-                            <label class="form-label">Discount *</label>
-                            <input type="number" class="form-control" value="0">
+                        <div class="col-md-12">
+                            <textarea class="w-100 form-control" name="Description" id="description" rows="5" placeholder="Description"></textarea>
                         </div>
+                        <h6 class="fw-bold mb-2">Assets Assigned</h6>
 
-                        <div class="col-md-6">
-                            <label class="form-label">Tax *</label>
-                            <input type="number" class="form-control" value="0">
+                        <div class="table-responsive">
+                          <table class="table table-bordered mb-0">
+                            <thead>
+                              <tr class="bg-light">
+                                <th>TYPE</th>
+                                <th>NAME/LICENSE PLATE NUMBER</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td colspan="2" class="text-center py-3">
+                                  No Record Found!!
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Sub Total *</label>
-                            <input type="number" class="form-control" value="0">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Total *</label>
-                            <input type="number" class="form-control" value="0">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Credits Per Month *</label>
-                            <input type="number" class="form-control" value="0">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">No of Asset *</label>
-                            <input type="number" class="form-control" value="1">
-                        </div>
-
-                        <div class="col-12">
-                            <label class="form-label">Description</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-
-                        <div class="col-12 mt-2">
-                            <label class="form-check">
-                                <input type="checkbox" class="form-check-input">
-                                <span class="form-check-label">Is Active</span>
-                            </label>
-                        </div>
-
                     </div>
 
-                    <hr class="my-3">
-
-                    <!-- Features Section -->
-                    <label class="fw-bold">Features</label>
-
-                    <div id="featuresContainer"></div>
-
-                    <!-- Add Feature Button -->
-                    <button type="button" id="addFeatureBtn" class="btn btn-primary mt-2">
-                        <i class="fas fa-plus"></i> Add Feature
-                    </button>
-
                 </form>
+                  </div>
+                </div>
             </div>
 
-            <div class="modal-footer">
-                <button class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
-                <button class="btn btn-primary">Save</button>
+            <!-- Footer -->
+            <div class="modal-footer border-0">
+                <button class="btn btn-light px-4 py-2" data-bs-dismiss="modal" style="border-radius: 10px;">Cancel</button>
+                <button class="btn btn-primary px-4 py-2" style="border-radius: 10px;">Save</button>
             </div>
 
         </div>
     </div>
 </div>
+
 
         <!-- Setup End -->
 
@@ -429,9 +388,113 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YfyABJLtHtGeSPWP-OroNbQ7yBvMWnw&callback=initMap&libraries=places,drawing"></script>
+
 
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+    let map, marker;
+
+    // Your custom codes linked to coordinates
+    const codeLocations = {
+        "6124111": { lat: 30.5600, lng: 31.0100 },
+        "6125010": { lat: 30.5715, lng: 31.0202 },
+        "5008883": { lat: 29.9876, lng: 31.1554 }
+    };
+
+    function initMap() {
+
+        // Default center before geolocation
+        map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: { lat: 30.05, lng: 31.25 },
+        });
+
+        // Create marker
+        marker = new google.maps.Marker({
+            map: map
+        });
+
+        // Try to get user's location
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    const userLocation = {
+                        lat: pos.coords.latitude,
+                        lng: pos.coords.longitude
+                    };
+
+                    map.setCenter(userLocation);
+                    marker.setPosition(userLocation);
+                },
+                () => {
+                    console.log("User did not allow location.");
+                }
+            );
+        }
+
+        // Autocomplete search box
+        const input = document.getElementById("searchBox");
+        const autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo("bounds", map);
+
+        autocomplete.addListener("place_changed", function () {
+            const place = autocomplete.getPlace();
+            if (!place.geometry) return;
+
+            map.setCenter(place.geometry.location);
+            marker.setPosition(place.geometry.location);
+        });
+
+        // Detect if user enters a code like: 6124111
+        input.addEventListener("keyup", function () {
+            const code = this.value.trim();
+            if (codeLocations[code]) {
+                const location = codeLocations[code];
+                map.setCenter(location);
+                marker.setPosition(location);
+            }
+        });
+    }
+
+document.getElementById("deleteZoneBtn").addEventListener("click", function () {
+
+    // Clear search box
+    document.getElementById("searchBox").value = "";
+
+    // Remove marker temporarily
+    if (marker) marker.setPosition(null);
+
+    // Get user current location again
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                const userLocation = {
+                    lat: pos.coords.latitude,
+                    lng: pos.coords.longitude
+                };
+
+                // Move map to current location
+                map.setCenter(userLocation);
+                map.setZoom(15);
+
+                // Put marker back at current location
+                marker.setPosition(userLocation);
+
+                console.log("Zone deleted & returned to user location.");
+            },
+            () => {
+                console.log("User blocked location. Can't return to current location.");
+            }
+        );
+    }
+});
+
+
+    window.onload = initMap;
+</script>
+
   </body>
 </html>

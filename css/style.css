@@ -528,7 +528,7 @@
     outline: none !important;
 }
 
-/* Make table more compact on mobile */
+/* Compact on Mobile */
 @media (max-width: 576px) {
     .datatable-search {
         padding: 8px 12px;
@@ -541,3 +541,36 @@
         white-space: nowrap;
     }
 }
+
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.feature-row input {
+    flex: 1;
+}
+
+.delete-feature-btn {
+    width: 45px;
+}
+
+
+
+.file-icon-only {
+    padding: 8px 10px 0;
+    color: var(--bs-primary);
+    cursor: pointer;
+    }
+
+
+
+.file-icon-only i {
+    font-size: 26px;
+    pointer-events: none;
+}
+
+

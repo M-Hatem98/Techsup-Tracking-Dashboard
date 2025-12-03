@@ -30,6 +30,8 @@
     <!-- Datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
@@ -97,13 +99,13 @@
             <a href="index.html" class="nav-item nav-link"
               ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a
             >
-            <a href="setup.html" class="nav-item nav-link"
+            <a href="setup.html" class="nav-item nav-link active"
               ><i class="fa fa-cogs me-2"></i>Setup</a
             >
             <a href="report.html" class="nav-item nav-link"
               ><i class="fa fa-file-alt me-2"></i>Report</a
             >
-            <a href="subaction.html" class="nav-item nav-link active"
+            <a href="subaction.html" class="nav-item nav-link"
               ><i class="fa fa-flag-checkered me-2"></i>Sub Action</a
             >
           </div>
@@ -216,40 +218,176 @@
         <!-- Setup Start -->
         <div class="container-fluid pt-4 px-4 overflow-hidden">
 
-                <h1 class="mb-4 text-primary">Subscription Action</h1>
-  
- <!-- Search Row -->
-<div class="row justify-content-center mb-3">
-  <div class="col-12 col-md-6">
-    <div class="datatable-search d-flex align-items-center">
-        <i class="fas fa-search"></i>
-        <input type="text" id="tableSearch" class="form-control" placeholder="Search...">
+            <h2 class="mb-4 text-primary">Device List</h2>
+            <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="setup.html">Setup</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Device List List</li>
+  </ol>
+</nav>
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+<div class="datatable-search d-flex align-items-center">
+            <i class="fas fa-search"></i>
+            <input type="text" id="tableSearch" class="form-control" placeholder="Search IMEI">
+        </div>
+        <div class="d-flex align-items-center gap-2">
+    <!-- Import Excel Button -->
+    <label for="importExcel" class="btn d-flex align-items-center gap-2 mb-0 text-primary fs-4">
+        <i class="fas fa-file-import"></i>
+    </label>
+    <input type="file" id="importExcel" accept=".xlsx,.xls" hidden>
+
+    <!-- Export Excel Button -->
+    <button id="exportBtn" class="btn d-flex align-items-center gap-2 text-primary fs-4">
+        <i class="fas fa-file-export"></i>
+    </button>
+
+    <!-- Add New SIM Card Button -->
+    <button class="btn btn-primary d-flex align-items-center gap-2" 
+            data-bs-toggle="modal" data-bs-target="#addModal">
+        <i class="fas fa-plus"></i> Add New SIM Card
+    </button>
     </div>
-  </div>
+
 </div>
 
-<!-- Responsive Table Wrapper -->
-<div class="table-responsive">
-  <table id="myTable" class="table table-hover">
-      <thead class="bg-primary">
-          <tr>
-              <th class="text-white">Client Name</th>
-              <th class="text-white">Selected Plan</th>
-              <th class="text-white">Previously Selected Plan</th>
-              <th class="text-white">Action</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr><td>Mohamed</td><td>Pro Plan</td><td>Free</td><td><span class="badge bg-success">Active</span></td></tr>
-          <tr><td>Ahmed</td><td>Pro Plan</td><td>Free</td><td><span class="badge bg-secondary">Inactive</span></td></tr>
-          <tr><td>Sarah</td><td>Pro Plan</td><td>Free</td><td><span class="badge bg-success">Active</span></td></tr>
-          <tr><td>Ali</td><td>Pro Plan</td><td>Free</td><td><span class="badge bg-warning">Pending</span></td></tr>
-      </tbody>
-  </table>
+
+    <!-- Responsive Table -->
+    <div class="table-responsive">
+        <table id="myTable" class="table table-hover align-middle">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>Operator</th>
+                    <th>MSISDN</th>
+                    <th>IMSI</th>
+                    <th>ICCID</th>
+                    <th>Country Code</th>
+                    <th>IMEI</th>
+                    <th>SIM Card</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Device H</td>
+                    <td>123</td>
+                    <td>Mohammed</td>
+                    <td>Gold</td>
+                    <td>Pro</td>
+                    <td>132</td>
+                    <td>456</td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Device H</td>
+                    <td>123</td>
+                    <td>Mohammed</td>
+                    <td>Gold</td>
+                    <td>Pro</td>
+                    <td>132</td>
+                    <td>456</td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Device H</td>
+                    <td>123</td>
+                    <td>Mohammed</td>
+                    <td>Gold</td>
+                    <td>Pro</td>
+                    <td>132</td>
+                    <td>456</td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Device H</td>
+                    <td>123</td>
+                    <td>Mohammed</td>
+                    <td>Gold</td>
+                    <td>Pro</td>
+                    <td>132</td>
+                    <td>456</td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Device H</td>
+                    <td>123</td>
+                    <td>Mohammed</td>
+                    <td>Gold</td>
+                    <td>Pro</td>
+                    <td>132</td>
+                    <td>456</td>
+                    <td><a href="#"><i class="fas fa-pen me-3"></i></a> <a href="#"><i class="fas fa-trash text-danger"></i></a></td>
+                </tr>
+                      
+            </tbody>
+        </table>
+    </div>
 </div>
 
+<!-- ===================================================== -->
+<!-- Add New Modal -->
+<!-- ===================================================== -->
+<div class="modal fade" id="addModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title text-primary">Device Type Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="addForm">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label">MSISDN *</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">MSISDN *</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">IMSI *</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">ICCID *</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Operator APN *</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Data Plan *</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Serial Number *</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Country Code *</label>
+                            <input type="text" class="form-control">
+                        </div>
+                     </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary">Save</button>
+            </div>
 
         </div>
+    </div>
+</div>
+
         <!-- Setup End -->
 
         <!-- Back to Top -->
@@ -273,8 +411,30 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+    <script>
+ document.getElementById("exportBtn").addEventListener("click", function () {
+
+    var table = document.getElementById("myTable");
+    var html = table.outerHTML;
+
+    var blob = new Blob([html], { type: "application/vnd.ms-excel" });
+    var url = URL.createObjectURL(blob);
+
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "Device_List.xls";
+    a.click();
+});
 
 
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
   </body>
