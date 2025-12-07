@@ -573,4 +573,38 @@
     pointer-events: none;
 }
 
+ input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    accent-color: var(--bs-primary);
+}
 
+.form-control,
+.form-select {
+    padding: 10px;
+}
+
+#myTable td, 
+#myTable th {
+    vertical-align: middle;
+}
+
+
+.upload-box {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  background: #f7faff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: 1px dashed #c6d7e2;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  height: 42px;
+}
