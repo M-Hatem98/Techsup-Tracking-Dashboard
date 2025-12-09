@@ -1,527 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>KSA Tracking Dashboard</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>KSA Tracking Dashboard</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link
-      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-      rel="stylesheet"
-    />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Aos Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
+  <!-- Aos Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
 
-  <body>
-    <div class="container-fluid position-relative bg-white d-flex p-0">
-      <!-- Spinner Start -->
-      <div
-        id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-      >
-        <div
-          class="spinner-border text-primary"
-          style="width: 3rem; height: 3rem"
-          role="status"
-        >
-          <span class="sr-only">Loading...</span>
+<body>
+  <div class="container-fluid position-relative bg-white d-flex p-0">
+    <!-- Spinner Start -->
+    <div id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Sidebar Start -->
+    <div class="sidebar pe-4 pb-3">
+      <nav class="navbar bg-light navbar-light">
+        <a href="index.html" class="navbar-brand mx-4 mb-3">
+          <img src="img/logo-dark.png" alt="Logo" width="150px" height="auto" />
+        </a>
+        <div class="d-flex align-items-center ms-4 mb-4">
+          <div class="position-relative">
+            <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px" />
+            <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+            </div>
+          </div>
+          <div class="ms-3">
+            <h6 class="mb-0">Mohammed Hatem</h6>
+            <span>Admin</span>
+          </div>
         </div>
-      </div>
-      <!-- Spinner End -->
+        <div class="navbar-nav w-100">
+          <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+          <a href="setup.html" class="nav-item nav-link active"><i class="fa fa-cogs me-2"></i>Setup</a>
+          <a href="report.html" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>Report</a>
+          <a href="subaction.html" class="nav-item nav-link"><i class="fa fa-flag-checkered me-2"></i>Sub Action</a>
+        </div>
+      </nav>
+    </div>
+    <!-- Sidebar End -->
 
-      <!-- Sidebar Start -->
-      <div class="sidebar pe-4 pb-3">
-        <nav class="navbar bg-light navbar-light">
-          <a href="index.html" class="navbar-brand mx-4 mb-3">
-            <img
-              src="img/logo-dark.png"
-              alt="Logo"
-              width="150px"
-              height="auto"
-            />
-          </a>
-          <div class="d-flex align-items-center ms-4 mb-4">
-            <div class="position-relative">
-              <img
-                class="rounded-circle"
-                src="img/user.jpg"
-                alt=""
-                style="width: 40px; height: 40px"
-              />
-              <div
-                class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"
-              ></div>
-            </div>
-            <div class="ms-3">
-              <h6 class="mb-0">Mohammed Hatem</h6>
-              <span>Admin</span>
-            </div>
-          </div>
-          <div class="navbar-nav w-100">
-            <a href="index.html" class="nav-item nav-link"
-              ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a
-            >
-            <a href="setup.html" class="nav-item nav-link active"
-              ><i class="fa fa-cogs me-2"></i>Setup</a
-            >
-            <a href="report.html" class="nav-item nav-link"
-              ><i class="fa fa-file-alt me-2"></i>Report</a
-            >
-            <a href="subaction.html" class="nav-item nav-link"
-              ><i class="fa fa-flag-checkered me-2"></i>Sub Action</a
-            >
-          </div>
-        </nav>
-      </div>
-      <!-- Sidebar End -->
+    <!-- Content Start -->
+    <div class="content">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+        <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+          <img src="img/favicon.ico" alt="Logo Icon" />
+        </a>
+        <a href="#" class="sidebar-toggler flex-shrink-0">
+          <i class="fa fa-bars"></i>
+        </a>
 
-      <!-- Content Start -->
-      <div class="content">
-        <!-- Navbar Start -->
-        <nav
-          class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0"
-        >
-          <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
-            <img src="img/favicon.ico" alt="Logo Icon">
-          </a>
-          <a href="#" class="sidebar-toggler flex-shrink-0">
-            <i class="fa fa-bars"></i>
-          </a>
-
-          <div class="navbar-nav align-items-center ms-auto">
-            <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                <i class="fa fa-bell me-lg-2"></i>
-                <span class="d-none d-lg-inline-flex">Notificatin</span>
+        <div class="navbar-nav align-items-center ms-auto">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-bell me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">Notificatin</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px" />
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
               </a>
-              <div
-                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
-              >
-                <a href="#" class="dropdown-item">
-                  <div class="d-flex align-items-center">
-                    <img
-                      class="rounded-circle"
-                      src="img/user.jpg"
-                      alt=""
-                      style="width: 40px; height: 40px"
-                    />
-                    <div class="ms-2">
-                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                      <small>15 minutes ago</small>
-                    </div>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px" />
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
                   </div>
-                </a>
-                <hr class="dropdown-divider" />
-                <a href="#" class="dropdown-item">
-                  <div class="d-flex align-items-center">
-                    <img
-                      class="rounded-circle"
-                      src="img/user.jpg"
-                      alt=""
-                      style="width: 40px; height: 40px"
-                    />
-                    <div class="ms-2">
-                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                      <small>15 minutes ago</small>
-                    </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px" />
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
                   </div>
-                </a>
-                <hr class="dropdown-divider" />
-                <a href="#" class="dropdown-item">
-                  <div class="d-flex align-items-center">
-                    <img
-                      class="rounded-circle"
-                      src="img/user.jpg"
-                      alt=""
-                      style="width: 40px; height: 40px"
-                    />
-                    <div class="ms-2">
-                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                      <small>15 minutes ago</small>
-                    </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item text-center">See all message</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="Profile Image"
+                style="width: 40px; height: 40px" />
+              <span class="d-none d-lg-inline-flex">Mohammed Hatem</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">My Profile</a>
+              <a href="#" class="dropdown-item">Change Password</a>
+              <a href="#" class="dropdown-item">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Setup Start -->
+      <div class="container-fluid pt-4 px-4 overflow-hidden">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-center">
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-general"
+                    aria-selected="true">
+                    General
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-device-tab" data-bs-toggle="pill" data-bs-target="#pills-device"
+                    type="button" role="tab" aria-controls="pills-device" aria-selected="false">
+                    Device Management
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-asset-tab" data-bs-toggle="pill" data-bs-target="#pills-asset"
+                    type="button" role="tab" aria-controls="pills-asset" aria-selected="false">
+                    Asset Management
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-administration-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-administration" type="button" role="tab" aria-controls="pills-administration"
+                    aria-selected="false">
+                    Administration
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-general" role="tabpanel"
+                aria-labelledby="pills-general-tab" tabindex="0">
+                <div class="row py-5 g-4">
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+                    <a href="subscriptionplan.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow">
+                          <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h5 class="title">Subscription Plan</h5>
+                        <p>
+                          Create, update, delete and list Subscription Plan
+                          details
+                        </p>
+                      </div>
+                    </a>
                   </div>
-                </a>
-                <hr class="dropdown-divider" />
-                <a href="#" class="dropdown-item text-center"
-                  >See all message</a
-                >
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                    <a href="subscriptionmanagement.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow">
+                          <i class="fas fa-tasks"></i>
+                        </div>
+                        <h5 class="title">Subscription Management</h5>
+                        <p>
+                          Create, update, delete and list Subscription
+                          Management details
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="geofence.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-green">
+                          <i class="fa fa-crosshairs"></i>
+                        </div>
+                        <h5 class="title">Geofence</h5>
+                        <p>
+                          Create, update, delete and list geofence using
+                          different objects like circle, rectangle and
+                          polygons and mapping pets/vehicles/humans with fence
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
+                    <a href="poi.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-purple">
+                          <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="title">POI</h5>
+                        <p>
+                          Create, update, delete and list POI using different
+                          objects like circle, rectangle and polygons and
+                          mapping pets/vehicles/humans with fence
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="pills-device" role="tabpanel" aria-labelledby="pills-device-tab"
+                tabindex="0">
+                <div class="row py-5 g-4">
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+                    <a href="devicetype.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow">
+                          <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5 class="title">Device Type</h5>
+                        <p>
+                          Create, update, delete and list Device Type details
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                    <a href="devicemodel.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow">
+                          <i class="fas fa-box-open"></i>
+                        </div>
+                        <h5 class="title">Device Model</h5>
+                        <p>
+                          Create, update, delete and list Device Model details
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="devicebrand.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-green">
+                          <i class="fas fa-tags"></i>
+                        </div>
+                        <h5 class="title">Device Brand</h5>
+                        <p>
+                          Create, update, delete and list Device Brand details
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
+                    <a href="simcard.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-purple">
+                          <i class="fas fa-sim-card"></i>
+                        </div>
+                        <h5 class="title">SIM Card</h5>
+                        <p>
+                          Create, update, delete and list SIM Card details
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <a href="devicelist.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-purple">
+                          <i class="fas fa-list-alt"></i>
+                        </div>
+                        <h5 class="title">Device List</h5>
+                        <p>Create, update, delete and list Device details</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="pills-asset" role="tabpanel" aria-labelledby="pills-asset-tab"
+                tabindex="0">
+                <div class="row py-5 g-4">
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+                    <a href="vehiclemanagement.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow">
+                          <i class="fas fa-truck"></i>
+                        </div>
+                        <h5 class="title">Vehicle Management</h5>
+                        <p>Create, update, delete and list Vehicle details</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                    <a href="petmanagement.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow">
+                          <i class="fas fa-paw"></i>
+                        </div>
+                        <h5 class="title">Pet Management</h5>
+                        <p>Create, update, delete and list Pet details</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="humanmanagement.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-green">
+                          <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h5 class="title">Member / Human Management</h5>
+                        <p>Create, update, delete and list Human details</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
+                    <a href="iotmanagement.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-green">
+                          <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h5 class="title">IOT Management</h5>
+                        <p>Create, update, delete and list IOT details</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="pills-administration" role="tabpanel"
+                aria-labelledby="pills-administration-tab" tabindex="0">
+                <div class="row py-5 g-4">
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
+                    <a href="rolemanagement.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow">
+                          <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h5 class="title">Role Management</h5>
+                        <p>Create, update, delete and list Role details</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                    <a href="usermanagement.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow">
+                          <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h5 class="title">User Management</h5>
+                        <p>Create, update, delete and list User details</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="assetincharge.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-green">
+                          <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h5 class="title">Asset Incharge</h5>
+                        <p>
+                          Create, update, delete and list Asset Incharge
+                          details, Driver can also be asset manager.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
+                    <a href="mailsetting.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-green">
+                          <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h5 class="title">Mail Setting</h5>
+                        <p>
+                          Create, update, delete and list Mail Setting details
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card -->
+                  <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <a href="clientmanagement.html">
+                      <div class="new-feature-card">
+                        <div class="icon-glow icon-green">
+                          <i class="fas fa-address-card"></i>
+                        </div>
+                        <h5 class="title">Client Management</h5>
+                        <p>Create, update, delete and list Client details</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                <img
-                  class="rounded-circle me-lg-2"
-                  src="img/user.jpg"
-                  alt="Profile Image"
-                  style="width: 40px; height: 40px"
-                />
-                <span class="d-none d-lg-inline-flex">Mohammed Hatem</span>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
-              >
-                <a href="#" class="dropdown-item">My Profile</a>
-                <a href="#" class="dropdown-item">Change Password</a>
-                <a href="#" class="dropdown-item">Log Out</a>
-              </div>
-            </div>
           </div>
-        </nav>
-        <!-- Navbar End -->
-
-        <!-- Setup Start -->
-        <div class="container-fluid pt-4 px-4 overflow-hidden">
-          <div class="row">
-            <div class="col-12">
-
-          <div class="d-flex justify-content-center">
-
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill" data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-general" aria-selected="true">General</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-device-tab" data-bs-toggle="pill" data-bs-target="#pills-device" type="button" role="tab" aria-controls="pills-device" aria-selected="false">Device Management</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-asset-tab" data-bs-toggle="pill" data-bs-target="#pills-asset" type="button" role="tab" aria-controls="pills-asset" aria-selected="false">Asset Management</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-administration-tab" data-bs-toggle="pill" data-bs-target="#pills-administration" type="button" role="tab" aria-controls="pills-administration" aria-selected="false">Administration</button>
-  </li>
-</ul>
-</div> 
-
-<div class="tab-content " id="pills-tabContent">
-
-  <div class="tab-pane fade show active" id="pills-general" role="tabpanel" aria-labelledby="pills-general-tab" tabindex="0">
-    <div class="row py-5 g-4">
-
-    <!-- Card -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-        <a href="subscriptionplan.html">
-          <div class="new-feature-card">
-            <div class="icon-glow">
-              <i class="fas fa-flag-checkered"></i>
-            </div>
-            <h5 class="title">Subscription Plan</h5>
-            <p>Create, update, delete and list Subscription Plan details</p>
-          </div>
-        </a>
-    </div>
-
-    <!-- Card -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
-        <a href="subscriptionmanagement.html">
-          <div class="new-feature-card">
-            <div class="icon-glow">
-              <i class="fas fa-flag-checkered"></i>
-            </div>
-            <h5 class="title">Subscription Management</h5>
-            <p>Create, update, delete and list Subscription Management details</p>
-          </div>
-        </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-      <a href="geofence.html">
-      <div class="new-feature-card">
-        <div class="icon-glow icon-green">
-          <i class="fas fa-draw-polygon"></i>
         </div>
-        <h5 class="title">Geofence</h5>
-        <p>Create, update, delete and list geofence using different objects like circle, rectangle and polygons and mapping pets/vehicles/humans with fence</p>
       </div>
-      </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
-      <a href="poi.html">
-
-        <div class="new-feature-card">
-          <div class="icon-glow icon-purple">
-            <i class="fas fa-map-pin"></i>
-        </div>
-        <h5 class="title">POI</h5>
-        <p>Create, update, delete and list POI using different objects like circle, rectangle and polygons and mapping pets/vehicles/humans with fence</p>
-      </div>
-    </a>
-    </div>
-
-  </div>
-  </div>
- 
-  <div class="tab-pane fade" id="pills-device" role="tabpanel" aria-labelledby="pills-device-tab" tabindex="0">
-    <div class="row py-5 g-4">
-
-    <!-- Card -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-        <a href="devicetype.html">
-          <div class="new-feature-card">
-            <div class="icon-glow">
-              <i class="fas fa-tablet-alt"></i>
-            </div>
-            <h5 class="title">Device Type</h5>
-            <p>Create, update, delete and list Device Type details</p>
-          </div>
-        </a>
-    </div>
-
-    <!-- Card -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
-        <a href="devicemodel.html">
-          <div class="new-feature-card">
-            <div class="icon-glow">
-              <i class="fas fa-tablet"></i>
-            </div>
-            <h5 class="title">Device Model</h5>
-            <p>Create, update, delete and list Device Model details</p>
-          </div>
-        </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-      <a href="devicebrand.html">
-        <div class="new-feature-card">
-          <div class="icon-glow icon-green">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h5 class="title">Device Brand</h5>
-          <p>Create, update, delete and list Device Brand details</p>
-        </div>
-      </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
-      <a href="simcard.html">
-        <div class="new-feature-card">
-          <div class="icon-glow icon-purple">
-            <i class="fas fa-sim-card"></i>
-          </div>
-          <h5 class="title">SIM Card</h5>
-          <p>Create, update, delete and list SIM Card details</p>
-        </div>
-      </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-      <a href="devicelist.html">
-        <div class="new-feature-card">
-          <div class="icon-glow icon-purple">
-            <i class="far fa-list-alt"></i>
-          </div>
-          <h5 class="title">Device List</h5>
-          <p>Create, update, delete and list Device details</p>
-        </div>
-      </a>
-    </div>
-
-  </div>
-  </div>
-
-  <div class="tab-pane fade" id="pills-asset" role="tabpanel" aria-labelledby="pills-asset-tab" tabindex="0">
-    <div class="row py-5 g-4">
-
-    <!-- Card -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-        <a href="vehiclemanagement.html">
-          <div class="new-feature-card">
-            <div class="icon-glow">
-          <i class="fas fa-truck-moving"></i>
-        </div>
-        <h5 class="title">Vehicle Management</h5>
-        <p>Create, update, delete and list Vehicle details</p>
-      </div>
-    </a>
-    </div>
-
-    <!-- Card -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
-        <a href="petmanagement.html">
-          <div class="new-feature-card">
-            <div class="icon-glow">
-          <i class="fas fa-cat"></i>
-        </div>
-        <h5 class="title">Pet Management</h5>
-        <p>Create, update, delete and list Pet details</p>
-      </div>
-    </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-      <a href="humanmanagement.html">
-        <div class="new-feature-card">
-          <div class="icon-glow icon-green">
-          <i class="fas fa-user"></i>
-        </div>
-        <h5 class="title">Member / Human Management</h5>
-        <p>Create, update, delete and list Human details</p>
-      </div>
-      </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
-      <a href="iotmanagement.html">
-        <div class="new-feature-card">
-          <div class="icon-glow icon-green">
-          <i class="fas fa-user"></i>
-        </div>
-        <h5 class="title">IOT Management</h5>
-        <p>Create, update, delete and list IOT details</p>
-      </div>
-    </a>
-    </div>
-
-  </div>
-  </div>
-
-  <div class="tab-pane fade" id="pills-administration" role="tabpanel" aria-labelledby="pills-administration-tab" tabindex="0">
-     <div class="row py-5 g-4">
-
-    <!-- Card -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="0">
-        <a href="rolemanagement.html">
-          <div class="new-feature-card">
-            <div class="icon-glow">
-              <i class="fas fa-id-card"></i>
-            </div>
-            <h5 class="title">Role Management</h5>
-            <p>Create, update, delete and list Role details</p>
-          </div>
-        </a>
-    </div>
-
-    <!-- Card -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
-        <a href="usermanagement.html">
-          <div class="new-feature-card">
-            <div class="icon-glow">
-              <i class="fas fa-user"></i>
-            </div>
-            <h5 class="title">User Management</h5>
-            <p>Create, update, delete and list User details</p>
-          </div>
-        </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-      <a href="assetincharge.html">
-        <div class="new-feature-card">
-          <div class="icon-glow icon-green">
-            <i class="far fa-user"></i>
-        </div>
-        <h5 class="title">Asset Incharge</h5>
-        <p>Create, update, delete and list Asset Incharge details, Driver can also be asset manager.</p>
-      </div>
-    </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="450">
-      <a href="mailsetting.html">
-        <div class="new-feature-card">
-          <div class="icon-glow icon-green">
-            <i class="fas fa-mail-bulk"></i>
-        </div>
-        <h5 class="title">Mail Setting</h5>
-        <p>Create, update, delete and list Mail Setting details</p>
-      </div>
-    </a>
-    </div>
-
-    <!-- Card -->
-    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-      <a href="clientmanagement.html">
-        <div class="new-feature-card">
-          <div class="icon-glow icon-green">
-          <i class="fas fa-id-badge"></i>
-        </div>
-        <h5 class="title">Client Management</h5>
-        <p>Create, update, delete and list Client details</p>
-      </div>
-    </a>
-    </div>
-
-  </div>
-  </div>
-
-</div>
- </div>
-          </div>
-        </div>
-        <!-- Setup End -->
+      <!-- Setup End -->
 
       <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-        ><i class="bi bi-arrow-up"></i
-      ></a>
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-    </div>
+  </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/chart/chart.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/tempusdominus/js/moment.min.js"></script>
+  <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-  </body>
 </html>

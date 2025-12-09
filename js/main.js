@@ -194,22 +194,69 @@
     // });
 
 
-$(document).ready(function () { 
-    var table = $('#myTable').DataTable({
-         dom: 'rtip',  
-         pageLength: 5, 
-         lengthMenu: [5, 10, 20, 50], 
-         responsive: true, 
-         language: {
-             search: "",
-            searchPlaceholder: "", 
-        }
-     }); 
- $('#tableSearch').keyup(function () {
-     table.search($(this).val()).draw(); 
-    }); 
-});
+// $(document).ready(function () { 
+//     var table = $('#myTable').DataTable({
+//          dom: 'rtip',  
+//          pageLength: 5, 
+//          lengthMenu: [5, 10, 20, 50], 
+//          responsive: true, 
+//          language: {
+//              search: "",
+//             searchPlaceholder: "", 
+//         }
+//      }); 
+//  $('#tableSearch').keyup(function () {
+//      table.search($(this).val()).draw(); 
+//     }); 
+// });
 
+
+  $(document).ready(function () {
+
+    var table = $('#myTable').DataTable({
+        dom: 'rtip',
+        pageLength: 5,
+        lengthMenu: [5, 10, 20, 50],
+        responsive: true,
+        language: {
+            search: "",
+            searchPlaceholder: "",
+        }
+    });
+
+    // IMEI Search
+    $('#tableSearch').keyup(function () {
+        table.search(this.value).draw();
+    });
+
+    // Status Filter
+    $('#statusFilter').on('change', function () {
+        table.column(1).search(this.value).draw();
+    });
+
+    // Type Filter
+    $('#typeFilter').on('change', function () {
+        table.column(3).search(this.value).draw();
+    });
+
+    // Date Range Filter
+    $.fn.dataTable.ext.search.push(function (settings, data) {
+        let min = $('#startDate').val();
+        let max = $('#endDate').val();
+        let date = data[1]; // set your date column index
+
+        if (!min && !max) return true;
+        if (min && date < min) return false;
+        if (max && date > max) return false;
+
+        return true;
+    });
+
+    $('#startDate, #endDate').on('change', function () {
+        table.draw();
+    });
+
+});
 
 
 
@@ -243,3 +290,5 @@ $(document).ready(function () {
         featureDiv.remove();
     };
 });
+
+

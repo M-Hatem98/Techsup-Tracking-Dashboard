@@ -27,6 +27,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!-- Datatable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
@@ -212,112 +217,103 @@
 
         <!-- Setup Start -->
         <div class="container-fluid pt-4 px-4 overflow-hidden">
-          <div class="row py-5 g-4">
-                    <!-- Card -->
-                    <div
-                      class="col-xl-3 col-lg-4 col-md-6 mb-4"
-                      data-aos="fade-up"
-                      data-aos-delay="0"
-                    >
-                    <a href="triplist.html">
-                      <div class="new-feature-card">
-                        <div class="icon-glow">
-                          <!-- <i class="fas fa-route"></i> -->
-                          <i class="fas fa-clipboard-list"></i>
-                        </div>
-                        <h5 class="title">Trip List</h5>
-                        <p>Report on list of devices which is not working or stopped working</p>
-                      </div>
-                    </a>
-                    </div>
 
-                    <!-- Card -->
-                    <div
-                      class="col-xl-3 col-lg-4 col-md-6 mb-4"
-                      data-aos="fade-up"
-                      data-aos-delay="150"
-                    >
-                    <a href="geofenceviolations.html">
-                      <div class="new-feature-card">
-                        <div class="icon-glow">
-                          <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h5 class="title">Geofence Violations</h5>
-                        <p>Report on list of Vehicle/Pet/Human out of Geofence</p>
-                      </div>
-                    </a>
-                    </div>
+            <h2 class="mb-4 text-primary">Subscription Transaction</h2>
+            <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="report.html">Report</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Subscription Transaction</li>
+  </ol>
+</nav>
+   <div class="mb-3">
+<div class="row">
+<div class="col-12 col-md-4 col-lg-2 mb-sm-2">
+        <select id="typeFilter" class="form-select w-100">
+            <option hidden>Search Status</option>
+            <option value="Pending">Pending</option>
+            <option value="Approved">Approved</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+    </div>    
+    
+    <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
+        <select id="clientsearch" class="form-select w-100">
+            <option hidden>Search Client</option>
+            <option disabled>Record Not Found</option>
+        </select>
+    </div> 
 
-                    <!-- Card -->
-                    <div
-                      class="col-xl-3 col-lg-4 col-md-6 mb-4"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                    <a href="departures.html">
-                      <div class="new-feature-card">
-                        <div class="icon-glow icon-green">
-                          <i class="fas fa-location-arrow"></i>
-                        </div>
-                        <h5 class="title">POI Arrivals/Departures</h5>
-                        <p>Report of POI Arrivals and Departures</p>
-                      </div>
-                    </a>
-                    </div>
+</div>
+</div>
 
-                    <!-- Card -->
-                    <div
-                      class="col-xl-3 col-lg-4 col-md-6 mb-4"
-                      data-aos="fade-up"
-                      data-aos-delay="450"
-                    >
-                    <a href="assetsummary.html">
-                      <div class="new-feature-card">
-                        <div class="icon-glow icon-purple">
-                          <i class="fas fa-boxes"></i>
-                        </div>
-                        <h5 class="title">Asset Summary</h5>
-                        <p>Asset Summary Report</p>
-                      </div>
-                    </a>
-                    </div>
-                    
-                    <!-- Card -->
-                    <div
-                      class="col-xl-3 col-lg-4 col-md-6 mb-4"
-                      data-aos="fade-up"
-                      data-aos-delay="450"
-                    >
-                    <a href="odometers.html">
-                      <div class="new-feature-card">
-                        <div class="icon-glow icon-purple">
-                          <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <h5 class="title">Odometers</h5>
-                        <p>Vehicle Meter Reading Report (Based on Tracking Device)</p>
-                      </div>
-                    </a>
-                    </div>
-                    
-                    <!-- Card -->
-                    <div
-                      class="col-xl-3 col-lg-4 col-md-6 mb-4"
-                      data-aos="fade-up"
-                      data-aos-delay="450"
-                    >
-                    <a href="subscriptiontransaction.html">
-                      <div class="new-feature-card">
-                        <div class="icon-glow icon-purple">
-                          <i class="fas fa-file-invoice"></i>
-                        </div>
-                        <h5 class="title">Subscription Transaction</h5>
-                        <p>Subscription Transaction List</p>
-                      </div>
-                    </a>
-                    </div>
+<!-- Responsive Table -->
+<div class="table-responsive">
+    <table id="myTable" class="table table-hover">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th>Client Name</th>
+                <th>Selected Plan</th>
+                <th>Previously Selected Plan</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
 
-                  </div>
-        </div>
+        <tbody>
+            
+            <tr>
+                <td>Mohammed Hatem</td>
+                <td>Pro</td>
+                <td>Advanced</td>
+                <td>12 / 8 / 2023</td>
+                <td>Approved</td>
+            </tr>
+            
+            <tr>
+                <td>Mohammed Hatem</td>
+                <td>Pro</td>
+                <td>Advanced</td>
+                <td>12 / 8 / 2023</td>
+                <td>Approved</td>
+            </tr>
+            
+            <tr>
+                <td>Mohammed Hatem</td>
+                <td>Pro</td>
+                <td>Advanced</td>
+                <td>12 / 8 / 2023</td>
+                <td>Approved</td>
+            </tr>
+            
+            <tr>
+                <td>Mohammed Hatem</td>
+                <td>Pro</td>
+                <td>Advanced</td>
+                <td>12 / 8 / 2023</td>
+                <td>Approved</td>
+            </tr>
+            
+            <tr>
+                <td>Mohammed Hatem</td>
+                <td>Pro</td>
+                <td>Advanced</td>
+                <td>12 / 8 / 2023</td>
+                <td>Approved</td>
+            </tr>
+            
+            <tr>
+                <td>Mohammed Hatem</td>
+                <td>Pro</td>
+                <td>Advanced</td>
+                <td>12 / 8 / 2023</td>
+                <td>Approved</td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+
+
         <!-- Setup End -->
 
         <!-- Back to Top -->
@@ -338,6 +334,10 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
