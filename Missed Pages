@@ -1,0 +1,11 @@
+"forget password" => /auth/forgot-password                                    ====>forgot-password.html
+"delete account" => /auth/delete                                              ====> delete-account.html
+"request access" => /auth/request-access                                      ====> request-access.html
+"request access confirm" => /auth/request-access-confirm                      ====> request-access-confirmation.html
+"forgot password confirm"=>/auth/forgot-password-confirm                      ====> forgot-password-confirmation.html
+"delete user confirm" => /auth/delete-user-confirm                            ====> delete-account.html
+"set password" => /auth/set-password                                          ====> set-password.html
+"verification" => /auth/registration/verification                             ====> verification.html
+"verification confirmation" => /auth/registration/verification/confirmation   ====> verification-Confirmation.html
+"delete user info " => /auth/delete-user-info                                 ====> delete-user-info.html
+"Profile" => /profile                                                         ====> profile.html

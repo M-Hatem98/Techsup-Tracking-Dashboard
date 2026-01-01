@@ -608,3 +608,556 @@
   border-radius: 10px;
   height: 42px;
 }
+
+/* forget Password */
+.forgot-wrapper {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .forgot-left {
+      padding: 3rem;
+    }
+
+    .forgot-left h2 {
+      font-weight: 700;
+      color: var(--bs-primary);
+    }
+
+    .forgot-left p {
+      color: #6c757d;
+      margin-bottom: 2rem;
+    }
+
+    .forgot-right {
+      background: linear-gradient(135deg, #4f9bff, var(--bs-primary));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .forgot-right i {
+      font-size: 120px;
+      opacity: 0.9;
+    }
+
+    .forgot-right h4 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      color: var(--bs-white);
+    }
+
+    @media (max-width: 991px) {
+      .forgot-right {
+        display: none;
+      }
+    }
+
+    /* Forgot Password Confirmation */
+
+    .confirmation-card {
+      background: var(--bs-white);
+      border-radius: 20px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+      padding: 3rem;
+      max-width: 650px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .confirmation-icon {
+      width: 90px;
+      height: 90px;
+      background: var(--bs-light);
+      color: var(--bs-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 40px;
+    }
+
+    .confirmation-card h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .confirmation-card p {
+      color: var(--bs-secondary);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .btn-login {
+      margin-top: 2rem;
+      padding: 12px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    /* Delete Account */
+
+        .delete-wrapper {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .delete-left {
+      padding: 3.5rem;
+    }
+
+    .delete-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .delete-icon {
+      width: 70px;
+      height: 70px;
+      background: rgba(220, 53, 69, 0.1);
+      color: #dc3545;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 1.5rem;
+    }
+
+    .delete-left h2 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .delete-left p {
+      color: #6c757d;
+      margin-bottom: 2rem;
+    }
+
+    .form-control {
+      border-radius: 12px;
+      padding: 12px 15px;
+    }
+
+    .captcha-box {
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      padding: 12px;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-delete {
+      background: #dc3545;
+      border: none;
+      border-radius: 50px;
+      padding: 12px;
+      font-weight: 600;
+    }
+
+    .btn-delete:hover {
+      background: #bb2d3b;
+    }
+
+    .signin-link {
+      display: block;
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+
+    @media (max-width: 991px) {
+      .delete-right {
+        display: none;
+      }
+    }
+
+    /* Delete Account Confirmation */
+ .confirm-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 650px;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .warning-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(220,53,69,0.1);
+      color: #dc3545;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .confirm-title {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .confirm-text {
+      color: #6c757d;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-delete {
+      background: #dc3545;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-weight: 600;
+    }
+
+    .btn-delete:hover {
+      background: #bb2d3b;
+    }
+
+    .btn-cancel {
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-weight: 600;
+    }
+
+    /* delete User info */
+
+    .confirm-wrapper {
+      max-width: 650px;
+      width: 100%;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+      padding: 3rem;
+    }
+
+    .icon-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: rgba(var(--bs-primary-rgb), 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .icon-circle i {
+      font-size: 42px;
+      color: var(--bs-primary);
+    }
+
+    .confirm-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .confirm-list i {
+      font-size: 20px;
+      margin-top: 2px;
+    }
+
+    .btn-main {
+      padding: 12px 42px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    /* Request Access */
+
+    .access-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 900px;
+      overflow: hidden;
+    }
+
+    .access-header {
+      background: #f1f5f9;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      color: #0d6efd;
+    }
+
+    .access-body {
+      padding: 2.5rem;
+    }
+
+    .form-control {
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    textarea.form-control {
+  height: auto !important;
+  min-height: 140px; 
+  resize: vertical;
+}
+
+
+    .captcha-box {
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      padding: 12px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .btn-request {
+      background: #0d6efd;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 600;
+    }
+
+    .btn-request:hover {
+      background: #084298;
+    }
+
+    .signin-link {
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    /* Request Access Confirmation */
+
+        .confirmation-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 650px;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .confirmation-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(13,110,253,0.1);
+      color: #0d6efd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .confirmation-title {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .confirmation-text {
+      color: #6c757d;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .btn-login {
+      background: #0d6efd;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 36px;
+      font-weight: 600;
+    }
+
+    .btn-login:hover {
+      background: #084298;
+    }
+    /* Set Password */
+
+    .set-wrapper {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .set-left {
+      padding: 3rem;
+    }
+
+    .set-left h2 {
+      color: var(--bs-primary);
+      font-weight: 700;
+    }
+
+    .set-left p {
+      color: #6c757d;
+    }
+
+    /* .form-control {
+      border-radius: 14px;
+      padding: 14px 16px;
+    } */
+
+    .password-field {
+      position: relative;
+    }
+
+  .password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .form-control {
+  padding-right: 45px; 
+}
+
+.password-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  display: flex;
+  align-items: center; 
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 18px;
+}
+
+
+    .btn-primary {
+      border-radius: 50px;
+      padding: 12px;
+      font-weight: 600;
+    }
+
+    .signin-link {
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .set-right {
+      background: linear-gradient(135deg, #e9f2ff, #f8fbff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .set-right i {
+      font-size: 90px;
+      color: var(--bs-primary);
+    }
+
+    @media (max-width: 991px) {
+      .set-right {
+        display: none;
+      }
+    }
+
+    /* Virification */
+
+     .auth-wrapper {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 30px 70px rgba(0,0,0,.15);
+      overflow: hidden;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .auth-left {
+      padding: 4rem;
+    }
+
+    .auth-left h2 {
+      color: var(--bs-primary);
+      font-weight: 700;
+    }
+
+    .auth-right {
+      background: linear-gradient(135deg, #e9f5ff, #f8fbff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .code-input {
+      letter-spacing: 4px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .resend-link {
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    /* Virification Confirmation */
+
+     .success-wrapper {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 30px 70px rgba(0,0,0,.15);
+      overflow: hidden;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .success-left {
+      padding: 4rem;
+    }
+
+    .success-left h2 {
+      color: var(--bs-primary);
+    }
+
+    .success-right {
+      background: linear-gradient(135deg, #e9f5ff, #f8fbff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .success-icon {
+      width: 90px;
+      height: 90px;
+      background: rgba(13,110,253,.1);
+      color: var(--bs-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      margin-bottom: 1.5rem;
+    }
