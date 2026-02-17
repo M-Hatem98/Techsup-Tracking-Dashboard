@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>KSA Tracking Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="../lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/rtl.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container-fluid position-relative bg-white d-flex p-0">
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">جاري التحميل...</span>
+        </div>
+      </div>
+
+      <div class="sidebar ps-4 pb-3">
+        <nav class="navbar bg-light navbar-light">
+          <a href="index.html" class="navbar-brand mx-4 mb-3">
+            <img
+              src="../img/logo-dark.png"
+              alt="Logo"
+              width="150px"
+              height="auto"
+            />
+          </a>
+          <div class="d-flex align-items-center ms-4 mb-4">
+            <div class="position-relative">
+              <img
+                class="rounded-circle"
+                src="../img/user.jpg"
+                alt=""
+                style="width: 40px; height: 40px"
+              />
+              <div
+                class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"
+              ></div>
+            </div>
+            <div class="ms-3">
+              <h6 class="mb-0">محمد حاتم</h6>
+              <span>مسؤول</span>
+            </div>
+          </div>
+          <div class="navbar-nav w-100">
+            <a href="index.html" class="nav-item nav-link active"
+              ><i class="fa fa-tachometer-alt me-2"></i>لوحة التحكم</a
+            >
+            <a href="setup.html" class="nav-item nav-link"
+              ><i class="fa fa-cogs me-2"></i>الإعدادات</a
+            >
+            <a href="report.html" class="nav-item nav-link"
+              ><i class="fa fa-file-alt me-2"></i>التقارير</a
+            >
+            <a href="subaction.html" class="nav-item nav-link"
+              ><i class="fa fa-flag-checkered me-2"></i>إجراء فرعي</a
+            >
+          </div>
+        </nav>
+      </div>
+
+      <div class="content">
+        <nav
+          class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0"
+        >
+          <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+            <img src="../img/favicon.ico" alt="Logo Icon" />
+          </a>
+          <a href="#" class="sidebar-toggler flex-shrink-0">
+            <i class="fa fa-bars"></i>
+          </a>
+
+          <div class="navbar-nav align-items-center ms-auto">
+            <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+            <i class="fa fa-globe me-lg-2"></i>
+            <span class="d-none d-lg-inline-flex">اللغة</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+            <a href="../index.html" class="dropdown-item">
+                <img src="https://flagcdn.com/w20/us.png" class="me-2" alt="English"> English
+            </a>
+            <a href="index.html" class="dropdown-item active">
+                <img src="https://flagcdn.com/w20/sa.png" class="me-2" alt="Arabic"> العربية
+            </a>
+        </div>
+    </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa fa-bell me-lg-2"></i>
+                <span class="d-none d-lg-inline-flex">الإشعارات</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
+              >
+                <a href="#" class="dropdown-item">
+                  <div class="d-flex align-items-center">
+                    <img
+                      class="rounded-circle"
+                      src="../img/user.jpg"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div class="ms-2">
+                      <h6 class="fw-normal mb-0">جون أرسل لك رسالة</h6>
+                      <small>منذ 15 دقيقة</small>
+                    </div>
+                  </div>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item text-center"
+                  >عرض جميع الرسائل</a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  class="rounded-circle me-lg-2"
+                  src="../img/user.jpg"
+                  alt="Profile Image"
+                  style="width: 40px; height: 40px"
+                />
+                <span class="d-none d-lg-inline-flex">محمد حاتم</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
+              >
+                <a href="#" class="dropdown-item">ملفي الشخصي</a>
+                <a href="#" class="dropdown-item">تغيير كلمة المرور</a>
+                <a href="#" class="dropdown-item">تسجيل الخروج</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid pt-4 px-4 overflow-hidden">
+  <div class="row g-4">
+    <div class="col-sm-6 col-xl-4" data-aos="fade-up">
+      <div class="bg-primary rounded d-flex align-items-center justify-content-between p-4">
+        <div class="ms-3">
+          <p class="mb-2 text-white">إجمالي العملاء</p>
+          <h3 class="mb-0 text-white">7</h3>
+        </div>
+        <i class="fa fa-users fa-3x text-white"></i>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-4" data-aos="fade-up">
+      <div class="bg-primary rounded d-flex align-items-center justify-content-between p-4">
+        <div class="ms-3">
+          <p class="mb-2 text-white">إجمالي المركبات</p>
+          <h3 class="mb-0 text-white">10</h3>
+        </div>
+        <i class="fa fa-truck fa-3x text-white"></i>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-4" data-aos="fade-up">
+      <div class="bg-primary rounded d-flex align-items-center justify-content-between p-4">
+        <div class="ms-3">
+          <p class="mb-2 text-white">إجمالي الحيوانات الأليفة</p>
+          <h3 class="mb-0 text-white">3</h3>
+        </div>
+        <i class="fa fa-paw fa-3x text-white"></i>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-4" data-aos="fade-up">
+      <div class="bg-primary rounded d-flex align-items-center justify-content-between p-4">
+        <div class="ms-3">
+          <p class="mb-2 text-white">إجمالي الأفراد</p>
+          <h3 class="mb-0 text-white">4</h3>
+        </div>
+        <i class="fa fa-male fa-3x text-white"></i>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-4" data-aos="fade-up">
+      <div class="bg-primary rounded d-flex align-items-center justify-content-between p-4">
+        <div class="ms-3">
+          <p class="mb-2 text-white">إجمالي الأجهزة</p>
+          <h3 class="mb-0 text-white">6</h3>
+        </div>
+        <i class="fa fa-microchip fa-3x text-white"></i>
+      </div>
+    </div>
+    <div class="col-sm-6 col-xl-4" data-aos="fade-up">
+      <div class="bg-primary rounded d-flex align-items-center justify-content-between p-4">
+        <div class="ms-3">
+          <p class="mb-2 text-white">إجمالي شرائح البيانات</p>
+          <h3 class="mb-0 text-white">5</h3>
+        </div>
+        <i class="fa fa-sim-card fa-3x text-white"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="container-fluid pt-4 px-4 overflow-hidden">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row g-3">
+                <div class="col-md-8">
+                  <div
+                    class="search-box position-relative"
+                    data-aos="fade-left"
+                  >
+                    <input
+                      type="text"
+                      class="form-control modern-input"
+                      placeholder="ابحث هنا..."
+                    />
+                    <i class="fas fa-search search-icon"></i>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <select
+                    class="form-select modern-select"
+                    data-aos="fade-left"
+                  >
+                    <option selected disabled hidden>تصفية حسب النوع</option>
+                    <option value="pet">حيوان أليف</option>
+                    <option value="human">إنسان</option>
+                    <option value="vehicle">مركبة</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+  <div class="row g-3">
+    <div class="col-12 bg-light p-3 rounded-2" data-aos="zoom-in">
+      <div class="row align-items-center">
+        <div class="col-md-3 d-flex justify-content-center">
+          <img src="../img/car-icon.png" class="img-fluid w-75 mb-sm-3 mb-0" alt="أيقونة المركبة" />
+        </div>
+        
+        <div class="col-md-9 col-12 pt-5 pt-md-0">
+          <div class="row p-0 m-0">
+            <div class="col-12 d-flex">
+              <h5 class="mb-0">رقم تعريف الجهاز:</h5>
+              <p class="me-2 mb-0">866907059105576</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex mt-2">
+              <h6 class="mb-0">نوع الأصل:</h6>
+              <p class="me-2 mb-0">مركبة</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex mt-2">
+              <h6 class="mb-0">رقم المركبة:</h6>
+              <p class="me-2 mb-0">012345</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex mt-2">
+              <h6 class="mb-0">الحالة:</h6>
+              <p class="me-2 mb-0 text-danger">متوقفة</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex mt-2">
+              <p class="me-0 text-primary mb-0">
+                14 نوفمبر 2025، 2:19:57 صباحاً
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 bg-light p-3 rounded-2" data-aos="zoom-in">
+      <div class="row align-items-center">
+        <div class="col-md-3 d-flex justify-content-center">
+          <img src="../img/car-icon.png" class="img-fluid w-75 mb-sm-3 mb-0" alt="أيقونة المركبة" />
+        </div>
+        <div class="col-md-9 col-12 pt-5 pt-md-0">
+          <div class="row p-0 m-0">
+            <div class="col-12 d-flex">
+              <h5 class="mb-0">رقم تعريف الجهاز:</h5>
+              <p class="me-2 mb-0">866907059105576</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex mt-2">
+              <h6 class="mb-0">نوع الأصل:</h6>
+              <p class="me-2 mb-0">مركبة</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex mt-2">
+              <h6 class="mb-0">رقم المركبة:</h6>
+              <p class="me-2 mb-0">012345</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex mt-2">
+              <h6 class="mb-0">الحالة:</h6>
+              <p class="me-2 mb-0 text-danger">متوقفة</p>
+            </div>
+            <div class="col-12 col-md-6 d-flex mt-2">
+              <p class="me-0 text-primary mb-0">
+                14 نوفمبر 2025، 2:19:57 صباحاً
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mt-3 mt-md-0">
+              <div class="col-12">
+
+                <select
+                class="form-select modern-select mb-3"
+                data-aos="fade-right"
+                >
+                <option selected disabled hidden>ابحث عن عميل</option>
+                <option>محمد (moh.hat226@gmail.com)</option>
+              </select>
+            </div>
+            <div class="col-12">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14500.259158252193!2d46.69595128254556!3d24.69029943419625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0325d1470833%3A0x280a33e18155fa75!2z2LTYsdmD2Kkg2KrZg9iz2Kgg2KfZhNmF2LPYp9mG2K_YqSDZhNmE2KrYs9mI2YrZgg!5e0!3m2!1sar!2seg!4v1764017480974!5m2!1sar!2seg"
+        width="100%"
+        height="700"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-2"
+        data-aos="fade-up"
+        title="خريطة الموقع"
+    ></iframe>
+</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+          ><i class="bi bi-arrow-up"></i
+        ></a>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Spinner
+        var spinner = function () {
+          setTimeout(function () {
+            if ($("#spinner").length > 0) {
+              $("#spinner").removeClass("show");
+            }
+          }, 1);
+        };
+        spinner();
+
+        // Sidebar Toggler
+        $(".sidebar-toggler").on("click", function (e) {
+          e.preventDefault();
+          $(".sidebar").toggleClass("open");
+          $(".content").toggleClass("open");
+        });
+
+        AOS.init();
+      });
+    </script>
+  </body>
+</html>

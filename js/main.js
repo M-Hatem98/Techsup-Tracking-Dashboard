@@ -25,10 +25,101 @@
     });
 
     // Sidebar Toggler
-    $(".sidebar-toggler").click(function () {
-        $(".sidebar, .content").toggleClass("open");
-        return false;
+ $(document).ready(function () {
+
+  const $sidebarToggler = $(".sidebar-toggler");
+  const $sidebar = $(".sidebar");
+  const $content = $(".content");
+
+  if ($sidebarToggler.length) {
+    $sidebarToggler.on("click", function (e) {
+      e.preventDefault();
+      $sidebar.toggleClass("open");
+      $content.toggleClass("open");
     });
+  }
+
+});
+
+  $(document).ready(function () {
+
+    var table = $('#myTable').DataTable({
+        dom: 'rtip',
+        pageLength: 5,
+        lengthMenu: [5, 10, 20, 50],
+        responsive: true,
+        language: {
+            search: "",
+            searchPlaceholder: "",
+        }
+    });
+
+    // IMEI Search
+    $('#tableSearch').keyup(function () {
+        table.search(this.value).draw();
+    });
+
+    // Status Filter
+    $('#statusFilter').on('change', function () {
+        table.column(1).search(this.value).draw();
+    });
+
+    // Type Filter
+    $('#typeFilter').on('change', function () {
+        table.column(3).search(this.value).draw();
+    });
+
+    // Date Range Filter
+    $.fn.dataTable.ext.search.push(function (settings, data) {
+        let min = $('#startDate').val();
+        let max = $('#endDate').val();
+        let date = data[1]; // set your date column index
+
+        if (!min && !max) return true;
+        if (min && date < min) return false;
+        if (max && date > max) return false;
+
+        return true;
+    });
+
+    $('#startDate, #endDate').on('change', function () {
+        table.draw();
+    });
+
+});
+
+
+
+    
+})(jQuery);
+
+
+ AOS.init({
+    duration: 800,
+    once: true
+  });
+
+
+  document.getElementById("addFeatureBtn").addEventListener("click", function () {
+    const container = document.getElementById("featuresContainer");
+
+    const featureDiv = document.createElement("div");
+    featureDiv.className = "feature-row";
+
+    featureDiv.innerHTML = `
+        <input type="text" class="form-control" placeholder="Enter feature" />
+        <button type="button" class="btn btn-danger delete-feature-btn">
+            <i class="fas fa-trash"></i>
+        </button>
+    `;
+
+    container.appendChild(featureDiv);
+
+    // Delete feature
+    featureDiv.querySelector(".delete-feature-btn").onclick = function () {
+        featureDiv.remove();
+    };
+});
 
     // Progress Bar
     // $(".pg-bar").waypoint(
@@ -209,86 +300,3 @@
 //      table.search($(this).val()).draw(); 
 //     }); 
 // });
-
-
-  $(document).ready(function () {
-
-    var table = $('#myTable').DataTable({
-        dom: 'rtip',
-        pageLength: 5,
-        lengthMenu: [5, 10, 20, 50],
-        responsive: true,
-        language: {
-            search: "",
-            searchPlaceholder: "",
-        }
-    });
-
-    // IMEI Search
-    $('#tableSearch').keyup(function () {
-        table.search(this.value).draw();
-    });
-
-    // Status Filter
-    $('#statusFilter').on('change', function () {
-        table.column(1).search(this.value).draw();
-    });
-
-    // Type Filter
-    $('#typeFilter').on('change', function () {
-        table.column(3).search(this.value).draw();
-    });
-
-    // Date Range Filter
-    $.fn.dataTable.ext.search.push(function (settings, data) {
-        let min = $('#startDate').val();
-        let max = $('#endDate').val();
-        let date = data[1]; // set your date column index
-
-        if (!min && !max) return true;
-        if (min && date < min) return false;
-        if (max && date > max) return false;
-
-        return true;
-    });
-
-    $('#startDate, #endDate').on('change', function () {
-        table.draw();
-    });
-
-});
-
-
-
-    
-})(jQuery);
-
-
- AOS.init({
-    duration: 800,
-    once: true
-  });
-
-
-  document.getElementById("addFeatureBtn").addEventListener("click", function () {
-    const container = document.getElementById("featuresContainer");
-
-    const featureDiv = document.createElement("div");
-    featureDiv.className = "feature-row";
-
-    featureDiv.innerHTML = `
-        <input type="text" class="form-control" placeholder="Enter feature" />
-        <button type="button" class="btn btn-danger delete-feature-btn">
-            <i class="fas fa-trash"></i>
-        </button>
-    `;
-
-    container.appendChild(featureDiv);
-
-    // Delete feature
-    featureDiv.querySelector(".delete-feature-btn").onclick = function () {
-        featureDiv.remove();
-    };
-});
-
-
