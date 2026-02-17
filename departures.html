@@ -1,340 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>KSA Tracking Dashboard</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>KSA Tracking Dashboard</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <!-- Datatable -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Datatable -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
 
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link
-      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-      rel="stylesheet"
-    />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Aos Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Aos Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
 
-  <body>
-    <div class="container-fluid position-relative bg-white d-flex p-0">
-      <!-- Spinner Start -->
-      <div
-        id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-      >
-        <div
-          class="spinner-border text-primary"
-          style="width: 3rem; height: 3rem"
-          role="status"
-        >
-          <span class="sr-only">Loading...</span>
-        </div>
+<body>
+  <div class="container-fluid position-relative bg-white d-flex p-0">
+    <!-- Spinner Start -->
+    <div id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">Loading...</span>
       </div>
-      <!-- Spinner End -->
+    </div>
+    <!-- Spinner End -->
 
-      <!-- Sidebar Start -->
-      <div class="sidebar pe-4 pb-3">
-        <nav class="navbar bg-light navbar-light">
-          <a href="index.html" class="navbar-brand mx-4 mb-3">
-            <img
-              src="img/logo-dark.png"
-              alt="Logo"
-              width="150px"
-              height="auto"
-            />
-          </a>
-          <div class="d-flex align-items-center ms-4 mb-4">
-            <div class="position-relative">
-              <img
-                class="rounded-circle"
-                src="img/user.jpg"
-                alt=""
-                style="width: 40px; height: 40px"
-              />
-              <div
-                class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"
-              ></div>
-            </div>
-            <div class="ms-3">
-              <h6 class="mb-0">Mohammed Hatem</h6>
-              <span>Admin</span>
-            </div>
-          </div>
-          <div class="navbar-nav w-100">
-            <a href="index.html" class="nav-item nav-link"
-              ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a
-            >
-            <a href="setup.html" class="nav-item nav-link"
-              ><i class="fa fa-cogs me-2"></i>Setup</a
-            >
-            <a href="report.html" class="nav-item nav-link active"
-              ><i class="fa fa-file-alt me-2"></i>Report</a
-            >
-            <a href="subaction.html" class="nav-item nav-link"
-              ><i class="fa fa-flag-checkered me-2"></i>Sub Action</a
-            >
-          </div>
-        </nav>
-      </div>
-      <!-- Sidebar End -->
-
-      <!-- Content Start -->
-      <div class="content">
-        <!-- Navbar Start -->
-        <nav
-          class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0"
-        >
-          <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
-            <img src="img/favicon.ico" alt="Logo Icon" />
-          </a>
-          <a href="#" class="sidebar-toggler flex-shrink-0">
-            <i class="fa fa-bars"></i>
-          </a>
-
-          <div class="navbar-nav align-items-center ms-auto">
-             <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-            <i class="fa fa-globe me-lg-2"></i>
-            <span class="d-none d-lg-inline-flex">Language</span>
+    <!-- Sidebar Start -->
+    <div class="sidebar pe-4 pb-3">
+      <nav class="navbar bg-light navbar-light">
+        <a href="index.html" class="navbar-brand mx-4 mb-3">
+          <img src="img/logo-dark.png" alt="Logo" width="150px" height="auto" />
         </a>
-        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-            <a href="index.html" class="dropdown-item active">
-                <img src="https://flagcdn.com/w20/us.png" class="me-2" alt="English"> English
-            </a>
-            <a href="AR/index.html" class="dropdown-item">
-                <img src="https://flagcdn.com/w20/sa.png" class="me-2" alt="Arabic"> العربية
-            </a>
-        </div>
-    </div>
-            <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                <i class="fa fa-bell me-lg-2"></i>
-                <span class="d-none d-lg-inline-flex">Notificatin</span>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
-              >
-                <a href="#" class="dropdown-item">
-                  <div class="d-flex align-items-center">
-                    <img
-                      class="rounded-circle"
-                      src="img/user.jpg"
-                      alt=""
-                      style="width: 40px; height: 40px"
-                    />
-                    <div class="ms-2">
-                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                      <small>15 minutes ago</small>
-                    </div>
-                  </div>
-                </a>
-                <hr class="dropdown-divider" />
-                <a href="#" class="dropdown-item">
-                  <div class="d-flex align-items-center">
-                    <img
-                      class="rounded-circle"
-                      src="img/user.jpg"
-                      alt=""
-                      style="width: 40px; height: 40px"
-                    />
-                    <div class="ms-2">
-                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                      <small>15 minutes ago</small>
-                    </div>
-                  </div>
-                </a>
-                <hr class="dropdown-divider" />
-                <a href="#" class="dropdown-item">
-                  <div class="d-flex align-items-center">
-                    <img
-                      class="rounded-circle"
-                      src="img/user.jpg"
-                      alt=""
-                      style="width: 40px; height: 40px"
-                    />
-                    <div class="ms-2">
-                      <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                      <small>15 minutes ago</small>
-                    </div>
-                  </div>
-                </a>
-                <hr class="dropdown-divider" />
-                <a href="#" class="dropdown-item text-center"
-                  >See all message</a
-                >
-              </div>
-            </div>
-            <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                <img
-                  class="rounded-circle me-lg-2"
-                  src="img/user.jpg"
-                  alt="Profile Image"
-                  style="width: 40px; height: 40px"
-                />
-                <span class="d-none d-lg-inline-flex">Mohammed Hatem</span>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
-              >
-                <a href="#" class="dropdown-item">My Profile</a>
-                <a href="#" class="dropdown-item">Change Password</a>
-                <a href="#" class="dropdown-item">Log Out</a>
-              </div>
+        <div class="d-flex align-items-center ms-4 mb-4">
+          <div class="position-relative">
+            <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px" />
+            <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
             </div>
           </div>
+          <div class="ms-3">
+            <h6 class="mb-0">Mohammed Hatem</h6>
+            <span>Admin</span>
+          </div>
+        </div>
+        <div class="navbar-nav w-100">
+          <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+          <a href="setup.html" class="nav-item nav-link"><i class="fa fa-cogs me-2"></i>Setup</a>
+          <a href="report.html" class="nav-item nav-link active"><i class="fa fa-file-alt me-2"></i>Report</a>
+          <a href="subaction.html" class="nav-item nav-link"><i class="fa fa-flag-checkered me-2"></i>Sub Action</a>
+        </div>
+      </nav>
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Content Start -->
+    <div class="content">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+        <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+          <img src="img/favicon.ico" alt="Logo Icon" />
+        </a>
+        <a href="#" class="sidebar-toggler flex-shrink-0">
+          <i class="fa fa-bars"></i>
+        </a>
+
+        <div class="navbar-nav align-items-center ms-auto">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-globe me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">Language</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="index.html" class="dropdown-item active">
+                <img src="https://flagcdn.com/w20/us.png" class="me-2" alt="English"> English
+              </a>
+              <a href="AR/index.html" class="dropdown-item">
+                <img src="https://flagcdn.com/w20/sa.png" class="me-2" alt="Arabic"> العربية
+              </a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-bell me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">Notificatin</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px" />
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px" />
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px" />
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item text-center">See all message</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="Profile Image"
+                style="width: 40px; height: 40px" />
+              <span class="d-none d-lg-inline-flex">Mohammed Hatem</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">My Profile</a>
+              <a href="#" class="dropdown-item">Change Password</a>
+              <a href="#" class="dropdown-item">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Setup Start -->
+      <div class="container-fluid pt-4 px-4 overflow-hidden">
+
+        <h2 class="mb-4 text-primary">POI Arrivals/Departures</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="report.html">Report</a></li>
+            <li class="breadcrumb-item active" aria-current="page">POI Arrivals/Departures</li>
+          </ol>
         </nav>
-        <!-- Navbar End -->
+        <div class="mb-3">
+          <div class="row">
+            <!-- Start Date -->
+            <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
+              <input type="date" id="startDate" class="form-control w-100" />
+            </div>
 
-        <!-- Setup Start -->
-        <div class="container-fluid pt-4 px-4 overflow-hidden">
+            <!-- End Date -->
+            <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
+              <input type="date" id="endDate" class="form-control w-100" />
+            </div>
 
-            <h2 class="mb-4 text-primary">POI Arrivals/Departures</h2>
-            <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="report.html">Report</a></li>
-    <li class="breadcrumb-item active" aria-current="page">POI Arrivals/Departures</li>
-  </ol>
-</nav>
-   <div class="mb-3">
-<div class="row">
-    <!-- Start Date -->
-    <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
-        <input type="date" id="startDate" class="form-control w-100" />
-    </div>
-    
-    <!-- End Date -->
-    <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
-        <input type="date" id="endDate" class="form-control w-100" />
-    </div>
+          </div>
+        </div>
 
-</div>
-</div>
-
-<!-- Responsive Table -->
-<div class="table-responsive">
-    <table id="myTable" class="table table-hover">
-        <thead class="bg-primary text-white">
-            <tr>
+        <!-- Responsive Table -->
+        <div class="table-responsive">
+          <table id="myTable" class="table table-hover">
+            <thead class="bg-primary text-white">
+              <tr>
                 <th>IMEI</th>
                 <th>License Plate Number/Name</th>
                 <th>POI Name</th>
                 <th>POI Status</th>
                 <th>Recorded Time Stamp</th>
                 <th>Action</th>
-            </tr>
-        </thead>
+              </tr>
+            </thead>
 
-        <tbody>
-            
-            <tr>
+            <tbody>
+
+              <tr>
                 <td>2082023</td>
                 <td>1234654321</td>
                 <td>Iot</td>
                 <td>Moing</td>
                 <td>120</td>
                 <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            
-            <tr>
+              </tr>
+
+              <tr>
                 <td>2082023</td>
                 <td>1234654321</td>
                 <td>Iot</td>
                 <td>Moing</td>
                 <td>120</td>
                 <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            
-            <tr>
+              </tr>
+
+              <tr>
                 <td>2082023</td>
                 <td>1234654321</td>
                 <td>Iot</td>
                 <td>Moing</td>
                 <td>120</td>
                 <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            
-            <tr>
+              </tr>
+
+              <tr>
                 <td>2082023</td>
                 <td>1234654321</td>
                 <td>Iot</td>
                 <td>Moing</td>
                 <td>120</td>
                 <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            
-            <tr>
+              </tr>
+
+              <tr>
                 <td>2082023</td>
                 <td>1234654321</td>
                 <td>Iot</td>
                 <td>Moing</td>
                 <td>120</td>
                 <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            
-            <tr>
+              </tr>
+
+              <tr>
                 <td>2082023</td>
                 <td>1234654321</td>
                 <td>Iot</td>
                 <td>Moing</td>
                 <td>120</td>
                 <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            
-        </tbody>
-    </table>
-</div>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
 
 
         <!-- Setup End -->
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-          ><i class="bi bi-arrow-up"></i
-        ></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
       </div>
     </div>
 
@@ -356,5 +283,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

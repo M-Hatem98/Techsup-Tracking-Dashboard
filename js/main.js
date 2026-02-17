@@ -99,7 +99,8 @@
     once: true
   });
 
-
+var subs = document.querySelector(".subs");
+if(subs){
   document.getElementById("addFeatureBtn").addEventListener("click", function () {
     const container = document.getElementById("featuresContainer");
 
@@ -120,7 +121,7 @@
         featureDiv.remove();
     };
 });
-
+}
     // Progress Bar
     // $(".pg-bar").waypoint(
     //     function () {
