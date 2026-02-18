@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>لوحة تحكم التتبع | الإعدادات</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link href="../img/favicon.ico" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/rtl.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid position-relative bg-white d-flex p-0">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+                <span class="sr-only">جاري التحميل...</span>
+            </div>
+        </div>
+        <div class="sidebar ps-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <img src="../img/logo-dark.png" alt="Logo" width="150px" height="auto" />
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="../img/user.jpg" alt="" style="width: 40px; height: 40px" />
+                        <div
+                            class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">محمد حاتم</h6>
+                        <span>مسؤول</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>لوحة
+                        التحكم</a>
+                    <a href="setup.html" class="nav-item nav-link active"><i class="fa fa-cogs me-2"></i>الإعدادات</a>
+                    <a href="report.html" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>التقارير</a>
+                    <a href="subaction.html" class="nav-item nav-link"><i class="fa fa-flag-checkered me-2"></i>إجراء
+                        فرعي</a>
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <img src="../img/favicon.ico" alt="Logo Icon" />
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-globe me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">اللغة</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="../setup.html" class="dropdown-item">
+                                <img src="https://flagcdn.com/w20/us.png" class="me-2" alt="English"> English
+                            </a>
+                            <a href="setup.html" class="dropdown-item active">
+                                <img src="https://flagcdn.com/w20/sa.png" class="me-2" alt="Arabic"> العربية
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">الإشعارات</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="../img/user.jpg" alt=""
+                                        style="width: 40px; height: 40px" />
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">جون أرسل لك رسالة</h6>
+                                        <small>منذ 15 دقيقة</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider" />
+                            <a href="#" class="dropdown-item text-center">عرض جميع الرسائل</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="../img/user.jpg" alt="Profile Image"
+                                style="width: 40px; height: 40px" />
+                            <span class="d-none d-lg-inline-flex">محمد حاتم</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">ملفي الشخصي</a>
+                            <a href="#" class="dropdown-item">تغيير كلمة المرور</a>
+                            <a href="#" class="dropdown-item">تسجيل الخروج</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="container-fluid pt-4 px-4 overflow-hidden">
+
+                <!-- Title -->
+                <h2 class="mb-4 text-primary">السياج الجغرافي</h2>
+
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="setup.html">الإعدادات</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            قائمة السياج الجغرافي
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- Header -->
+                <div class="d-flex justify-content-between align-items-center my-3 flex-wrap gap-2">
+
+                    <!-- Search -->
+                    <div class="datatable-search d-flex align-items-center">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="tableSearch" class="form-control" placeholder="بحث...">
+                    </div>
+
+                    <!-- Add Button -->
+                    <button class="btn btn-primary d-flex align-items-center gap-2" data-bs-toggle="modal"
+                        data-bs-target="#addModal">
+
+                        <i class="fas fa-plus"></i>
+                        إضافة بيانات
+                    </button>
+
+                </div>
+
+                <!-- Table -->
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th>منطقة السياج</th>
+                                <th>وصف السياج</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>6121890</td>
+                                <td>الوصف</td>
+                                <td>
+                                    <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                                    <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>6124111</td>
+                                <td>الوصف</td>
+                                <td>
+                                    <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                                    <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>6124101</td>
+                                <td>الوصف</td>
+                                <td>
+                                    <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                                    <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Mohammed Hatem</td>
+                                <td>الوصف</td>
+                                <td>
+                                    <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                                    <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ================= Modal ================= -->
+
+            <div class="modal fade" id="addModal" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content p-3" style="border-radius:18px;">
+
+                        <!-- Close -->
+                        <button type="button" class="btn-close me-auto" data-bs-dismiss="modal"></button>
+
+                        <!-- Title -->
+                        <h4 class="text-primary fw-bold px-2 mb-3">
+                            إضافة سياج جغرافي
+                        </h4>
+
+                        <div class="modal-body pt-0">
+
+                            <div class="row">
+
+                                <!-- Map Side -->
+                                <div class="col-12 col-md-6 mt-3">
+
+                                    <div class="d-flex gap-2">
+                                        <input id="searchBox" class="form-control mb-2 w-75" placeholder="بحث">
+
+                                        <button id="deleteZoneBtn" class="btn btn-danger mb-2">
+                                            حذف المنطقة
+                                        </button>
+                                    </div>
+
+                                    <div id="map" style="height:500px;width:100%;"></div>
+                                </div>
+
+                                <!-- Form Side -->
+                                <div class="col-12 col-md-6 mt-3">
+
+                                    <form>
+
+                                        <div class="row g-3">
+
+                                            <!-- Client -->
+                                            <div class="col-md-12">
+                                                <select class="form-select custom-select">
+                                                    <option hidden>العميل المرتبط</option>
+                                                    <option disabled>لا توجد بيانات</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="col-md-12">
+                                                <input type="text" class="form-control" placeholder="الاسم">
+                                            </div>
+
+                                            <!-- Description -->
+                                            <div class="col-md-12">
+                                                <textarea class="form-control" rows="5" placeholder="الوصف"></textarea>
+                                            </div>
+
+                                            <!-- Assets -->
+                                            <h6 class="fw-bold mb-2">
+                                                الأصول المرتبطة
+                                            </h6>
+
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered mb-0">
+
+                                                    <thead>
+                                                        <tr class="bg-light">
+                                                            <th>النوع</th>
+                                                            <th>الاسم / رقم اللوحة</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="2" class="text-center py-3">
+                                                                لا توجد بيانات
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="modal-footer border-0">
+                            <button class="btn btn-light px-4 py-2" data-bs-dismiss="modal">
+                                إلغاء
+                            </button>
+
+                            <button class="btn btn-primary px-4 py-2">
+                                حفظ
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YfyABJLtHtGeSPWP-OroNbQ7yBvMWnw&callback=initMap&libraries=places,drawing"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="../js/main.js"></script>
+    <script>
+        let map, marker;
+
+        // Your custom codes linked to coordinates
+        const codeLocations = {
+            "6124111": { lat: 30.5600, lng: 31.0100 },
+            "6125010": { lat: 30.5715, lng: 31.0202 },
+            "5008883": { lat: 29.9876, lng: 31.1554 }
+        };
+
+        function initMap() {
+
+            // Default center before geolocation
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: { lat: 30.05, lng: 31.25 },
+            });
+
+            // Create marker
+            marker = new google.maps.Marker({
+                map: map
+            });
+
+            // Try to get user's location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        const userLocation = {
+                            lat: pos.coords.latitude,
+                            lng: pos.coords.longitude
+                        };
+
+                        map.setCenter(userLocation);
+                        marker.setPosition(userLocation);
+                    },
+                    () => {
+                        console.log("User did not allow location.");
+                    }
+                );
+            }
+
+            // Autocomplete search box
+            const input = document.getElementById("searchBox");
+            const autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.bindTo("bounds", map);
+
+            autocomplete.addListener("place_changed", function () {
+                const place = autocomplete.getPlace();
+                if (!place.geometry) return;
+
+                map.setCenter(place.geometry.location);
+                marker.setPosition(place.geometry.location);
+            });
+
+            // Detect if user enters a code like: 6124111
+            input.addEventListener("keyup", function () {
+                const code = this.value.trim();
+                if (codeLocations[code]) {
+                    const location = codeLocations[code];
+                    map.setCenter(location);
+                    marker.setPosition(location);
+                }
+            });
+        }
+
+        document.getElementById("deleteZoneBtn").addEventListener("click", function () {
+
+            // Clear search box
+            document.getElementById("searchBox").value = "";
+
+            // Remove marker temporarily
+            if (marker) marker.setPosition(null);
+
+            // Get user current location again
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        const userLocation = {
+                            lat: pos.coords.latitude,
+                            lng: pos.coords.longitude
+                        };
+
+                        // Move map to current location
+                        map.setCenter(userLocation);
+                        map.setZoom(15);
+
+                        // Put marker back at current location
+                        marker.setPosition(userLocation);
+
+                        console.log("Zone deleted & returned to user location.");
+                    },
+                    () => {
+                        console.log("User blocked location. Can't return to current location.");
+                    }
+                );
+            }
+        });
+
+
+        window.onload = initMap;
+    </script>
+</body>
+
+</html>
