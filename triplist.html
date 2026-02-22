@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -28,10 +28,18 @@
       rel="stylesheet"
     />
     <!-- Datatable -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css"
+    />
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
@@ -127,20 +135,36 @@
           </a>
 
           <div class="navbar-nav align-items-center ms-auto">
-             <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-            <i class="fa fa-globe me-lg-2"></i>
-            <span class="d-none d-lg-inline-flex">Language</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-            <a href="index.html" class="dropdown-item active">
-                <img src="https://flagcdn.com/w20/us.png" class="me-2" alt="English"> English
-            </a>
-            <a href="AR/index.html" class="dropdown-item">
-                <img src="https://flagcdn.com/w20/sa.png" class="me-2" alt="Arabic"> العربية
-            </a>
-        </div>
-    </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa fa-globe me-lg-2"></i>
+                <span class="d-none d-lg-inline-flex">Language</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
+              >
+                <a href="index.html" class="dropdown-item active">
+                  <img
+                    src="https://flagcdn.com/w20/us.png"
+                    class="me-2"
+                    alt="English"
+                  />
+                  English
+                </a>
+                <a href="AR/index.html" class="dropdown-item">
+                  <img
+                    src="https://flagcdn.com/w20/sa.png"
+                    class="me-2"
+                    alt="Arabic"
+                  />
+                  العربية
+                </a>
+              </div>
+            </div>
             <div class="nav-item dropdown">
               <a
                 href="#"
@@ -231,121 +255,136 @@
 
         <!-- Setup Start -->
         <div class="container-fluid pt-4 px-4 overflow-hidden">
+          <h2 class="mb-4 text-primary">Trip List</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="report.html">Report</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Trip List
+              </li>
+            </ol>
+          </nav>
+          <div class="mb-3">
+            <div class="row">
+              <!-- Status Filter -->
+              <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
+                <select id="statusFilter" class="form-select w-100">
+                  <option hidden>Trip Type</option>
+                  <option value="Moving">Moving</option>
+                  <option value="Parked">Parked</option>
+                  <option value="Completed">Completed</option>
+                </select>
+              </div>
 
-            <h2 class="mb-4 text-primary">Trip List </h2>
-            <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="report.html">Report</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Trip List</li>
-  </ol>
-</nav>
-   <div class="mb-3">
-<div class="row">
-    <!-- Status Filter -->
-    <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
-        <select id="statusFilter" class="form-select w-100">
-            <option hidden>Trip Type</option>
-            <option value="Moving">Moving</option>
-            <option value="Parked">Parked</option>
-            <option value="Completed">Completed</option>
-        </select>
-    </div>
-    
-    <!-- Type Filter -->
-    <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
-        <select id="typeFilter" class="form-select w-100">
-            <option hidden>Assets Type</option>
-            <option value="Pet">Pet</option>
-            <option value="Vehicle">Vehicle</option>
-            <option value="Human">Human</option>
-            <option value="IOT">IOT</option>
-        </select>
-    </div>
-    
-    <!-- IMEI Search -->
-    <div class="col-12 col-md-4 col-lg-4 mb-sm-2">
-        <div class="datatable-search d-flex align-items-center w-100">
-            <i class="fas fa-search me-2"></i>
-            <input type="text" id="tableSearch" class="form-control" placeholder="Search IMEI">
+              <!-- Type Filter -->
+              <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
+                <select id="typeFilter" class="form-select w-100">
+                  <option hidden>Assets Type</option>
+                  <option value="Pet">Pet</option>
+                  <option value="Vehicle">Vehicle</option>
+                  <option value="Human">Human</option>
+                  <option value="IOT">IOT</option>
+                </select>
+              </div>
+
+              <!-- IMEI Search -->
+              <div class="col-12 col-md-4 col-lg-4 mb-sm-2">
+                <div class="datatable-search d-flex align-items-center w-100">
+                  <i class="fas fa-search me-2"></i>
+                  <input
+                    type="text"
+                    id="tableSearch"
+                    class="form-control"
+                    placeholder="Search IMEI"
+                  />
+                </div>
+              </div>
+
+              <!-- Start Date -->
+              <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
+                <input type="date" id="startDate" class="form-control w-100" />
+              </div>
+
+              <!-- End Date -->
+              <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
+                <input type="date" id="endDate" class="form-control w-100" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Responsive Table -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover">
+              <thead class="bg-primary text-white">
+                <tr>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Trip Status</th>
+                  <th>Device IMEI</th>
+                  <th>Max Speed</th>
+                  <th>Name/License Plate Number</th>
+                  <th>Asset Type</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>20 / 8 / 2023</td>
+                  <td>25 / 8 / 2023</td>
+                  <td>Parked</td>
+                  <td>1231321321</td>
+                  <td>120</td>
+                  <td>Mohammed Hatem</td>
+                  <td>Device H</td>
+                  <td>
+                    <i class="fas fa-pen me-3"></i>
+                    <i class="fas fa-trash text-danger"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>20 / 8 / 2023</td>
+                  <td>25 / 8 / 2023</td>
+                  <td>Parked</td>
+                  <td>1231321321</td>
+                  <td>120</td>
+                  <td>Mohammed Hatem</td>
+                  <td>Device H</td>
+                  <td>
+                    <i class="fas fa-pen me-3"></i>
+                    <i class="fas fa-trash text-danger"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>20 / 8 / 2023</td>
+                  <td>25 / 8 / 2023</td>
+                  <td>Parked</td>
+                  <td>1231321321</td>
+                  <td>120</td>
+                  <td>Mohammed Hatem</td>
+                  <td>Device H</td>
+                  <td>
+                    <i class="fas fa-pen me-3"></i>
+                    <i class="fas fa-trash text-danger"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>20 / 8 / 2023</td>
+                  <td>25 / 8 / 2023</td>
+                  <td>Parked</td>
+                  <td>1231321321</td>
+                  <td>120</td>
+                  <td>Mohammed Hatem</td>
+                  <td>Device H</td>
+                  <td>
+                    <i class="fas fa-pen me-3"></i>
+                    <i class="fas fa-trash text-danger"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-    </div>
-
-    <!-- Start Date -->
-    <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
-        <input type="date" id="startDate" class="form-control w-100" />
-    </div>
-    
-    <!-- End Date -->
-    <div class="col-12 col-md-4 col-lg-2 mb-sm-2">
-        <input type="date" id="endDate" class="form-control w-100" />
-    </div>
-
-</div>
-</div>
-
-<!-- Responsive Table -->
-<div class="table-responsive">
-    <table id="myTable" class="table table-hover">
-        <thead class="bg-primary text-white">
-            <tr>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Trip Status</th>
-                <th>Device IMEI</th>
-                <th>Max Speed</th>
-                <th>Name/License Plate Number</th>
-                <th>Asset Type</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>20 / 8 / 2023</td>
-                <td>25 / 8 / 2023</td>
-                <td>Parked</td>
-                <td>1231321321</td>
-                <td>120</td>
-                <td>Mohammed Hatem</td>
-                <td>Device H</td>
-                <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            <tr>
-                <td>20 / 8 / 2023</td>
-                <td>25 / 8 / 2023</td>
-                <td>Parked</td>
-                <td>1231321321</td>
-                <td>120</td>
-                <td>Mohammed Hatem</td>
-                <td>Device H</td>
-                <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            <tr>
-                <td>20 / 8 / 2023</td>
-                <td>25 / 8 / 2023</td>
-                <td>Parked</td>
-                <td>1231321321</td>
-                <td>120</td>
-                <td>Mohammed Hatem</td>
-                <td>Device H</td>
-                <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-            <tr>
-                <td>20 / 8 / 2023</td>
-                <td>25 / 8 / 2023</td>
-                <td>Parked</td>
-                <td>1231321321</td>
-                <td>120</td>
-                <td>Mohammed Hatem</td>
-                <td>Device H</td>
-                <td><i class="fas fa-pen me-3"></i> <i class="fas fa-trash text-danger"></i></td>
-            </tr>
-
-            
-        </tbody>
-    </table>
-</div>
-
 
         <!-- Setup End -->
 
@@ -370,7 +409,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
-
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

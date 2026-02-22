@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <title>لوحة تحكم التتبع | الإعدادات</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <link href="../img/favicon.ico" rel="icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/rtl.css" rel="stylesheet" /> </head>
+
+<body  class="subs">
+  <div class="container-fluid position-relative bg-white d-flex p-0">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">جاري التحميل...</span>
+      </div>
+    </div>
+    <div class="sidebar ps-4 pb-3">
+      <nav class="navbar bg-light navbar-light">
+        <a href="index.html" class="navbar-brand mx-4 mb-3">
+          <img src="../img/logo-dark.png" alt="Logo" width="150px" height="auto" />
+        </a>
+        <div class="d-flex align-items-center ms-4 mb-4">
+          <div class="position-relative">
+            <img class="rounded-circle" src="../img/user.jpg" alt="" style="width: 40px; height: 40px" />
+            <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+            </div>
+          </div>
+          <div class="ms-3">
+            <h6 class="mb-0">محمد حاتم</h6>
+            <span>مسؤول</span>
+          </div>
+        </div>
+        <div class="navbar-nav w-100">
+          <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>لوحة التحكم</a>
+          <a href="setup.html" class="nav-item nav-link active"><i class="fa fa-cogs me-2"></i>الإعدادات</a>
+          <a href="report.html" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>التقارير</a>
+          <a href="subaction.html" class="nav-item nav-link"><i class="fa fa-flag-checkered me-2"></i>إجراء فرعي</a>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+        <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+          <img src="../img/favicon.ico" alt="Logo Icon" />
+        </a>
+        <a href="#" class="sidebar-toggler flex-shrink-0">
+          <i class="fa fa-bars"></i>
+        </a>
+
+        <div class="navbar-nav align-items-center ms-auto">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-globe me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">اللغة</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="../setup.html" class="dropdown-item">
+                <img src="https://flagcdn.com/w20/us.png" class="me-2" alt="English"> English
+              </a>
+              <a href="setup.html" class="dropdown-item active">
+                <img src="https://flagcdn.com/w20/sa.png" class="me-2" alt="Arabic"> العربية
+              </a>
+            </div>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa fa-bell me-lg-2"></i>
+              <span class="d-none d-lg-inline-flex">الإشعارات</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <img class="rounded-circle" src="../img/user.jpg" alt="" style="width: 40px; height: 40px" />
+                  <div class="ms-2">
+                    <h6 class="fw-normal mb-0">جون أرسل لك رسالة</h6>
+                    <small>منذ 15 دقيقة</small>
+                  </div>
+                </div>
+              </a>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item text-center">عرض جميع الرسائل</a>
+            </div>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <img class="rounded-circle me-lg-2" src="../img/user.jpg" alt="Profile Image" style="width: 40px; height: 40px" />
+              <span class="d-none d-lg-inline-flex">محمد حاتم</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+              <a href="#" class="dropdown-item">ملفي الشخصي</a>
+              <a href="#" class="dropdown-item">تغيير كلمة المرور</a>
+              <a href="#" class="dropdown-item">تسجيل الخروج</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+
+      <div class="container-fluid pt-4 px-4 overflow-hidden text-end">
+
+    <h2 class="mb-4 text-primary">خطط الاشتراك</h2>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-start">
+            <li class="breadcrumb-item"><a href="setup.html">الإعدادات</a></li>
+            <li class="breadcrumb-item active" aria-current="page">قائمة خطط الاشتراك</li>
+        </ol>
+    </nav>
+
+    <!-- Header Row -->
+    <div class="d-flex justify-content-between align-items-center my-3 flex-wrap gap-2">
+
+        <div class="datatable-search d-flex align-items-center">
+            <i class="fas fa-search ms-2"></i>
+            <input type="text" id="tableSearch" class="form-control" placeholder="بحث...">
+        </div>
+
+        <button class="btn btn-primary d-flex align-items-center gap-2"
+                data-bs-toggle="modal" data-bs-target="#addModal">
+            <i class="fas fa-plus"></i> إضافة خطة جديدة
+        </button>
+    </div>
+
+    <!-- Responsive Table -->
+    <div class="table-responsive">
+        <table id="myTable" class="table table-hover align-middle text-center">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>الاسم</th>
+                    <th>الوصف</th>
+                    <th>نوع الخطة</th>
+                    <th>الإجمالي</th>
+                    <th>عدد الأصول</th>
+                    <th>الإجراء</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>آلات ثقيلة</td>
+                    <td>الوصف</td>
+                    <td>أسبوعي</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>
+                        <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                        <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>آلات ثقيلة</td>
+                    <td>الوصف</td>
+                    <td>أسبوعي</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>
+                        <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                        <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>آلات ثقيلة</td>
+                    <td>الوصف</td>
+                    <td>أسبوعي</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>
+                        <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                        <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>آلات ثقيلة</td>
+                    <td>الوصف</td>
+                    <td>أسبوعي</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>
+                        <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                        <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>آلات ثقيلة</td>
+                    <td>الوصف</td>
+                    <td>أسبوعي</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>
+                        <a href="#"><i class="fas fa-pen ms-3"></i></a>
+                        <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- Add New Modal -->
+<!-- ===================================================== -->
+<div class="modal fade" id="addModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content text-end">
+
+            <div class="modal-header">
+                <h5 class="modal-title text-primary">تفاصيل خطة الاشتراك</h5>
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="addForm">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label">الاسم *</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">نوع العميل *</label>
+                            <select class="form-select custom-select">
+                                <option>فردي</option>
+                                <option>أعمال</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">نوع الأصل *</label>
+                            <select class="form-select custom-select">
+                                <option>سيارة</option>
+                                <option>حيوان أليف</option>
+                                <option>شخص</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">الخصم *</label>
+                            <input type="number" class="form-control" value="0">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">الضريبة *</label>
+                            <input type="number" class="form-control" value="0">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">المجموع الفرعي *</label>
+                            <input type="number" class="form-control" value="0">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">الإجمالي *</label>
+                            <input type="number" class="form-control" value="0">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">عدد النقاط شهرياً *</label>
+                            <input type="number" class="form-control" value="0">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">عدد الأصول *</label>
+                            <input type="number" class="form-control" value="1">
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">الوصف</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+
+                        <div class="col-12 mt-2">
+                            <label class="form-check  d-flex justify-content-start gap-3">
+                                <span class="form-check-label">مفعل</span>
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <hr class="my-3">
+
+                    <!-- Features Section -->
+                    <label class="fw-bold">المميزات</label>
+
+                    <div id="featuresContainer"></div>
+
+                    <!-- Add Feature Button -->
+                    <button type="button" id="addFeatureBtn" class="btn btn-primary mt-2">
+                        <i class="fas fa-plus"></i> إضافة ميزة
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-light" data-bs-dismiss="modal">إلغاء</button>
+                <button class="btn btn-primary">حفظ</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+      
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../lib/tempusdominus/js/moment.min.js"></script>
+  <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
