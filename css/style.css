@@ -13,6 +13,14 @@
     z-index: 99;
 }
 
+.back-to-top-right {
+    left: 45px !important;
+    position: fixed;
+    display: none;
+    bottom: 45px;
+    z-index: 99;
+}
+
 a {
   text-decoration: none !important;
 }
